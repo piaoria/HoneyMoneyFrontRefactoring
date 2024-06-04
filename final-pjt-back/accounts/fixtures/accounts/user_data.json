@@ -1,0 +1,2701 @@
+[{
+	"model": "accounts.User",
+	"pk": 1,
+	"fields": {
+		"username": "testuser1",
+		"nickname": "최예준81",
+		"age": 73,
+		"profile_img": "images/default_profile.png",
+		"salary": 54130000,
+		"wealth": 975449000,
+		"tendency": 6,
+		"password": "pbkdf2_sha256$600000$ECv9XoqgidyHKPF7sxno3i$fomZHaIJtNqdBeihh6uaH2lHkXfEK4jt8Zf+zO2TtNw=",
+		"desirePeriod": 36,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			29,
+			13,
+			36
+		],
+		"saving": [
+			17,
+			21,
+			52
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 2,
+	"fields": {
+		"username": "testuser2",
+		"nickname": "임하윤34",
+		"age": 48,
+		"profile_img": "images/default_profile.png",
+		"salary": 78065000,
+		"wealth": 804131000,
+		"tendency": 1,
+		"password": "pbkdf2_sha256$600000$QfCbh31vB7iBy1rbbG9G5N$ukmGm/AS7dTDa6mJDBBFMaUvbE3kkuNI82JOq5FdrKE=",
+		"desirePeriod": 12,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			29,
+			6,
+			27
+		],
+		"saving": [
+			14,
+			29,
+			14
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 3,
+	"fields": {
+		"username": "testuser3",
+		"nickname": "유승원4",
+		"age": 62,
+		"profile_img": "images/default_profile.png",
+		"salary": 115032000,
+		"wealth": 354412000,
+		"tendency": 8,
+		"password": "pbkdf2_sha256$600000$etZ1yG1hfQ2mYdit72GXty$+hSRetxS50ATbWCmG4VNuB5k96SVHw/1TDY04yz95QA=",
+		"desirePeriod": 12,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			5,
+			25,
+			28
+		],
+		"saving": [
+			24,
+			57,
+			18
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 4,
+	"fields": {
+		"username": "testuser4",
+		"nickname": "임예환9",
+		"age": 75,
+		"profile_img": "images/default_profile.png",
+		"salary": 78978000,
+		"wealth": 579559000,
+		"tendency": 0,
+		"password": "pbkdf2_sha256$600000$MpKFb0qaeXru57dWAzuluh$oSQCDVSChE6WbPLKiINvCBgj1rTenw3YvZY50GLQVfI=",
+		"desirePeriod": 12,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			14,
+			11,
+			19
+		],
+		"saving": [
+			57,
+			7,
+			16
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 5,
+	"fields": {
+		"username": "testuser5",
+		"nickname": "배지연21",
+		"age": 27,
+		"profile_img": "images/default_profile.png",
+		"salary": 146238000,
+		"wealth": 891228000,
+		"tendency": 1,
+		"password": "pbkdf2_sha256$600000$YvpHeNE5WzanmcMW9OZEMp$HpXpF+ANW+uPhHxu+VkhgX+ZS28hl4D+kaAnWHgv6aI=",
+		"desirePeriod": 6,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			4,
+			19,
+			10
+		],
+		"saving": [
+			20,
+			57,
+			40
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 6,
+	"fields": {
+		"username": "testuser6",
+		"nickname": "원채혁10",
+		"age": 59,
+		"profile_img": "images/default_profile.png",
+		"salary": 56319000,
+		"wealth": 543800000,
+		"tendency": 4,
+		"password": "pbkdf2_sha256$600000$MNr12eIrIpN3xUalH2Myk6$IPQYabpOwau1qxDwtXc7vS7dJzUwWkxXOGkQqkIxiBU=",
+		"desirePeriod": 12,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			7,
+			27,
+			18
+		],
+		"saving": [
+			58,
+			45,
+			27
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 7,
+	"fields": {
+		"username": "testuser7",
+		"nickname": "윤서진72",
+		"age": 74,
+		"profile_img": "images/default_profile.png",
+		"salary": 87674000,
+		"wealth": 645893000,
+		"tendency": 1,
+		"password": "pbkdf2_sha256$600000$SDPlvKzwuXBkmsczRswEBH$xKZtzFTd7kCZ4OPfouat0iFB/h24bs5/3wauBJ+VygQ=",
+		"desirePeriod": 24,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			3,
+			29,
+			18
+		],
+		"saving": [
+			42,
+			10,
+			48
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 8,
+	"fields": {
+		"username": "testuser8",
+		"nickname": "배채영19",
+		"age": 71,
+		"profile_img": "images/default_profile.png",
+		"salary": 102576000,
+		"wealth": 658640000,
+		"tendency": 6,
+		"password": "pbkdf2_sha256$600000$ICsppS1jo4AYaf8qsqSfLh$SFuT/lJo83KYRFu7bdCSq0e6nZAWfE+i7GWn0Vu/Ayg=",
+		"desirePeriod": 36,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			35,
+			13,
+			21
+		],
+		"saving": [
+			14,
+			55,
+			28
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 9,
+	"fields": {
+		"username": "testuser9",
+		"nickname": "전하원36",
+		"age": 31,
+		"profile_img": "images/default_profile.png",
+		"salary": 98201000,
+		"wealth": 83580000,
+		"tendency": 2,
+		"password": "pbkdf2_sha256$600000$CNaHpIQO5FUR1BSFfbNNPw$hfP4pmF3IkrGODwCO/tsc2H4XNeZLbAI74Wr01ZBl7o=",
+		"desirePeriod": 24,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			23,
+			23,
+			21
+		],
+		"saving": [
+			7,
+			11,
+			46
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 10,
+	"fields": {
+		"username": "testuser10",
+		"nickname": "양경진21",
+		"age": 73,
+		"profile_img": "images/default_profile.png",
+		"salary": 72429000,
+		"wealth": 331408000,
+		"tendency": 3,
+		"password": "pbkdf2_sha256$600000$vURPU8E9TbdAvJ4FsXBOTs$XEHxChAXI7gkT1Oueqwaais770r6eobWMkpKySBjTRs=",
+		"desirePeriod": 12,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			35,
+			10,
+			31
+		],
+		"saving": [
+			2,
+			21,
+			15
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 11,
+	"fields": {
+		"username": "testuser11",
+		"nickname": "김주혁89",
+		"age": 25,
+		"profile_img": "images/default_profile.png",
+		"salary": 140923000,
+		"wealth": 739215000,
+		"tendency": 9,
+		"password": "pbkdf2_sha256$600000$JQAwx8lKONzNt56OcBusoL$mcqlGArVhFINpufykC8Xhz3Z3G1Zfddg42eQGGC5/Vk=",
+		"desirePeriod": 6,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			16,
+			12,
+			36
+		],
+		"saving": [
+			39,
+			34,
+			13
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 12,
+	"fields": {
+		"username": "testuser12",
+		"nickname": "오윤은34",
+		"age": 41,
+		"profile_img": "images/default_profile.png",
+		"salary": 101353000,
+		"wealth": 834492000,
+		"tendency": 10,
+		"password": "pbkdf2_sha256$600000$aFt9UXstYEQnf4egafOZDv$E+axV/wvzcLnIN25hPl5xiShLAfFwZIsF4wd2Gg1iOU=",
+		"desirePeriod": 12,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			21,
+			10,
+			27
+		],
+		"saving": [
+			27,
+			18,
+			60
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 13,
+	"fields": {
+		"username": "testuser13",
+		"nickname": "한효진14",
+		"age": 66,
+		"profile_img": "images/default_profile.png",
+		"salary": 135411000,
+		"wealth": 3382000,
+		"tendency": 3,
+		"password": "pbkdf2_sha256$600000$C5S1Ih79T5iQ94Oj5DHu81$878oKUSQjq8PjhbwPmZwkYz7swviCltwZL0QnfihIXs=",
+		"desirePeriod": 12,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			18,
+			24,
+			2
+		],
+		"saving": [
+			41,
+			12,
+			44
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 14,
+	"fields": {
+		"username": "testuser14",
+		"nickname": "문승서53",
+		"age": 64,
+		"profile_img": "images/default_profile.png",
+		"salary": 47765000,
+		"wealth": 514789000,
+		"tendency": 3,
+		"password": "pbkdf2_sha256$600000$PpA4UFhJo2YqPIWnQHFsfP$pb7NlT02I/oGkl3eXwSjyTqhxIpZ2puyEo4G+/Qg+QQ=",
+		"desirePeriod": 6,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			14,
+			2,
+			25
+		],
+		"saving": [
+			33,
+			58,
+			28
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 15,
+	"fields": {
+		"username": "testuser15",
+		"nickname": "손주서63",
+		"age": 74,
+		"profile_img": "images/default_profile.png",
+		"salary": 106413000,
+		"wealth": 356590000,
+		"tendency": 5,
+		"password": "pbkdf2_sha256$600000$OKz2JA2NCTWeFxXQxtopuK$Gd/QLQjodp2B9+jaa18NczE5bBIHyz8OckgfkGAa+f8=",
+		"desirePeriod": 6,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			12,
+			20,
+			34
+		],
+		"saving": [
+			37,
+			38,
+			31
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 16,
+	"fields": {
+		"username": "testuser16",
+		"nickname": "서현아50",
+		"age": 22,
+		"profile_img": "images/default_profile.png",
+		"salary": 134179000,
+		"wealth": 83853000,
+		"tendency": 1,
+		"password": "pbkdf2_sha256$600000$0htp6bcCxUlEsn5O2pL3lf$zWePuHufHWdhzWIUvPfEp2Io3SOR0aiZ1NvywKnRGEo=",
+		"desirePeriod": 12,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			35,
+			8,
+			17
+		],
+		"saving": [
+			27,
+			63,
+			12
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 17,
+	"fields": {
+		"username": "testuser17",
+		"nickname": "임민은5",
+		"age": 37,
+		"profile_img": "images/default_profile.png",
+		"salary": 43680000,
+		"wealth": 43453000,
+		"tendency": 7,
+		"password": "pbkdf2_sha256$600000$IM90rWZSd7JJVHGKmKaJf0$lkKFFoll5G2byavKEIgA6z/5dTHmGuOXRW16TnFBvFU=",
+		"desirePeriod": 6,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			3,
+			28,
+			2
+		],
+		"saving": [
+			24,
+			21,
+			16
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 18,
+	"fields": {
+		"username": "testuser18",
+		"nickname": "박지우11",
+		"age": 79,
+		"profile_img": "images/default_profile.png",
+		"salary": 33741000,
+		"wealth": 849638000,
+		"tendency": 5,
+		"password": "pbkdf2_sha256$600000$8bS4mXfpSTWzWLOYH8ZoMd$8JrqKJBpZCIo7cWUNAkrjDaThMhi0YJVLCIlE8IGBlg=",
+		"desirePeriod": 24,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			5,
+			29,
+			15
+		],
+		"saving": [
+			43,
+			1,
+			20
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 19,
+	"fields": {
+		"username": "testuser19",
+		"nickname": "서지호57",
+		"age": 91,
+		"profile_img": "images/default_profile.png",
+		"salary": 132487000,
+		"wealth": 147900000,
+		"tendency": 9,
+		"password": "pbkdf2_sha256$600000$kOWdpWcYj8a9vvRETPQovZ$vEFXD+KxB6BJblDLYbOfjxR9aMDH5vhL7X+PzdLAfnA=",
+		"desirePeriod": 24,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			5,
+			1,
+			27
+		],
+		"saving": [
+			45,
+			49,
+			35
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 20,
+	"fields": {
+		"username": "testuser20",
+		"nickname": "문현수84",
+		"age": 81,
+		"profile_img": "images/default_profile.png",
+		"salary": 52642000,
+		"wealth": 734049000,
+		"tendency": 0,
+		"password": "pbkdf2_sha256$600000$GSG3mL2ro9aw5nxBWmrUCJ$V6K0sGZKHogB71nfOTW6J6tMOtDXL9sb+OKQbeDHobs=",
+		"desirePeriod": 36,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			14,
+			4,
+			24
+		],
+		"saving": [
+			34,
+			51,
+			64
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 21,
+	"fields": {
+		"username": "testuser21",
+		"nickname": "장지인98",
+		"age": 97,
+		"profile_img": "images/default_profile.png",
+		"salary": 81389000,
+		"wealth": 382429000,
+		"tendency": 5,
+		"password": "pbkdf2_sha256$600000$hW59nIX976G6Tdh9gfRAQ4$8x2FBzEagHX9RUolKQSAAXdr3Kia1grYrs0H3qdt470=",
+		"desirePeriod": 6,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			16,
+			7,
+			32
+		],
+		"saving": [
+			36,
+			12,
+			34
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 22,
+	"fields": {
+		"username": "testuser22",
+		"nickname": "장주경68",
+		"age": 44,
+		"profile_img": "images/default_profile.png",
+		"salary": 32833000,
+		"wealth": 419691000,
+		"tendency": 0,
+		"password": "pbkdf2_sha256$600000$N7tSQswNXMR0GgukZ4QRny$pbAXl1mhfqHiTRWwvVEyvq3lmokU3GtttJCjzGl+L+M=",
+		"desirePeriod": 36,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			7,
+			2,
+			24
+		],
+		"saving": [
+			15,
+			14,
+			2
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 23,
+	"fields": {
+		"username": "testuser23",
+		"nickname": "문도우24",
+		"age": 90,
+		"profile_img": "images/default_profile.png",
+		"salary": 100943000,
+		"wealth": 252527000,
+		"tendency": 3,
+		"password": "pbkdf2_sha256$600000$DTwX8jwO12RRcUfF9mB6DV$ZY1V/2ePu1PfBE9wxm2oNFajBBrnCrUHRBrObbGAP0E=",
+		"desirePeriod": 12,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			28,
+			6,
+			13
+		],
+		"saving": [
+			44,
+			32,
+			29
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 24,
+	"fields": {
+		"username": "testuser24",
+		"nickname": "박효수16",
+		"age": 52,
+		"profile_img": "images/default_profile.png",
+		"salary": 80780000,
+		"wealth": 651014000,
+		"tendency": 5,
+		"password": "pbkdf2_sha256$600000$eAmgHSvLexJWa7K89Vj9im$JZ31FlasUQfyuqV/0t+w6/+dFbpHPYxs8EOlyPWOXrE=",
+		"desirePeriod": 12,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			19,
+			4,
+			31
+		],
+		"saving": [
+			48,
+			57,
+			24
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 25,
+	"fields": {
+		"username": "testuser25",
+		"nickname": "오현아54",
+		"age": 38,
+		"profile_img": "images/default_profile.png",
+		"salary": 125927000,
+		"wealth": 984825000,
+		"tendency": 9,
+		"password": "pbkdf2_sha256$600000$29BDnPuQ7O9HWDMl9saOk8$+Pe4PL2bYv4AVmaml90w5z32mJLiakCNs11pCDeA4J4=",
+		"desirePeriod": 12,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			15,
+			1,
+			29
+		],
+		"saving": [
+			61,
+			9,
+			35
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 26,
+	"fields": {
+		"username": "testuser26",
+		"nickname": "황승인23",
+		"age": 90,
+		"profile_img": "images/default_profile.png",
+		"salary": 42673000,
+		"wealth": 895858000,
+		"tendency": 8,
+		"password": "pbkdf2_sha256$600000$gODt53t9EiBNVD7yrfYllF$DETb8thGrNRwbD108AmmAqCYDK1NEWjuB2lIUiCfc/c=",
+		"desirePeriod": 12,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			2,
+			29,
+			14
+		],
+		"saving": [
+			33,
+			1,
+			33
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 27,
+	"fields": {
+		"username": "testuser27",
+		"nickname": "정지인98",
+		"age": 64,
+		"profile_img": "images/default_profile.png",
+		"salary": 92489000,
+		"wealth": 703889000,
+		"tendency": 10,
+		"password": "pbkdf2_sha256$600000$9Nbim2obHc5tpiOvtRZjxy$PfjI2AK5mUJwjFnOfYkw5IvYQzXdL+W4O+HbtWqRkpk=",
+		"desirePeriod": 6,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			37,
+			34,
+			5
+		],
+		"saving": [
+			62,
+			64,
+			59
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 28,
+	"fields": {
+		"username": "testuser28",
+		"nickname": "강주은88",
+		"age": 57,
+		"profile_img": "images/default_profile.png",
+		"salary": 50397000,
+		"wealth": 851982000,
+		"tendency": 5,
+		"password": "pbkdf2_sha256$600000$eq6WF2cuGfixFJiJqDuwUh$PxOeuT16YAdlDnULJcP1deqDoME7P4qC0ssdQxZngvU=",
+		"desirePeriod": 6,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			26,
+			11,
+			10
+		],
+		"saving": [
+			35,
+			62,
+			3
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 29,
+	"fields": {
+		"username": "testuser29",
+		"nickname": "정현우51",
+		"age": 76,
+		"profile_img": "images/default_profile.png",
+		"salary": 114352000,
+		"wealth": 24086000,
+		"tendency": 6,
+		"password": "pbkdf2_sha256$600000$M4UpCjY2WKDYOTWazzAMw8$fCWAIdy0WqBdzo13mk8rTo9C0/4awg4mdsWdZhVMUBc=",
+		"desirePeriod": 36,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			36,
+			28,
+			27
+		],
+		"saving": [
+			21,
+			21,
+			54
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 30,
+	"fields": {
+		"username": "testuser30",
+		"nickname": "박서후37",
+		"age": 81,
+		"profile_img": "images/default_profile.png",
+		"salary": 43780000,
+		"wealth": 939052000,
+		"tendency": 3,
+		"password": "pbkdf2_sha256$600000$5bLXPZfCOUyBHcuRU64zX8$rQ2M2cAQTcBCarpdIU3xnkHW1yi0DEA1E3QvHkMqbto=",
+		"desirePeriod": 36,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			34,
+			23,
+			29
+		],
+		"saving": [
+			12,
+			14,
+			59
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 31,
+	"fields": {
+		"username": "testuser31",
+		"nickname": "최채수72",
+		"age": 97,
+		"profile_img": "images/default_profile.png",
+		"salary": 127376000,
+		"wealth": 598145000,
+		"tendency": 6,
+		"password": "pbkdf2_sha256$600000$m5tdtPo7mO1HU0pNAnkiSz$Ie+Lguqr5XflIPUCVa+uNVVqg5BKMoEJcusM1/4Ea6E=",
+		"desirePeriod": 24,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			18,
+			10,
+			25
+		],
+		"saving": [
+			50,
+			60,
+			56
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 32,
+	"fields": {
+		"username": "testuser32",
+		"nickname": "박경윤11",
+		"age": 35,
+		"profile_img": "images/default_profile.png",
+		"salary": 44431000,
+		"wealth": 133741000,
+		"tendency": 8,
+		"password": "pbkdf2_sha256$600000$ahzUTryeaZ2xWbkG886HyA$mCECPyaPBG7bL4zGjARUV7jC6J8mpNh79g16D4jGOPI=",
+		"desirePeriod": 6,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			12,
+			20,
+			16
+		],
+		"saving": [
+			55,
+			16,
+			32
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 33,
+	"fields": {
+		"username": "testuser33",
+		"nickname": "조지서37",
+		"age": 49,
+		"profile_img": "images/default_profile.png",
+		"salary": 52637000,
+		"wealth": 437343000,
+		"tendency": 4,
+		"password": "pbkdf2_sha256$600000$43uiodNTjlnoroGJtJbrSx$K3LL6KBMl0f/nAwOhUFfq5dRIYWe+SyUjBhopElcAJo=",
+		"desirePeriod": 36,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			32,
+			16,
+			32
+		],
+		"saving": [
+			3,
+			51,
+			23
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 34,
+	"fields": {
+		"username": "testuser34",
+		"nickname": "오도원26",
+		"age": 52,
+		"profile_img": "images/default_profile.png",
+		"salary": 98142000,
+		"wealth": 900450000,
+		"tendency": 8,
+		"password": "pbkdf2_sha256$600000$NxNPKfuZRMwuVejD7YKDlw$n0r2lDv6gExEYbcBdc8pPNFdi3P5Xgd00pBPeUcRHS0=",
+		"desirePeriod": 12,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			23,
+			9,
+			13
+		],
+		"saving": [
+			16,
+			47,
+			58
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 35,
+	"fields": {
+		"username": "testuser35",
+		"nickname": "전채아66",
+		"age": 74,
+		"profile_img": "images/default_profile.png",
+		"salary": 59981000,
+		"wealth": 68236000,
+		"tendency": 2,
+		"password": "pbkdf2_sha256$600000$a4aVor4xShPHJWSYihPurO$6xZZ3s5wfnoRbtJ7ya/ZPxyuRYt7womIC1eYtgakNeg=",
+		"desirePeriod": 24,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			21,
+			23,
+			17
+		],
+		"saving": [
+			51,
+			46,
+			38
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 36,
+	"fields": {
+		"username": "testuser36",
+		"nickname": "이현연33",
+		"age": 72,
+		"profile_img": "images/default_profile.png",
+		"salary": 139342000,
+		"wealth": 937970000,
+		"tendency": 5,
+		"password": "pbkdf2_sha256$600000$FhJIvoi4JHYyjcS7os8LOn$5wVIk291oih7R02+BXaBmZldHmaer/KDdkWyUUsmtzw=",
+		"desirePeriod": 36,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			33,
+			12,
+			21
+		],
+		"saving": [
+			29,
+			44,
+			37
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 37,
+	"fields": {
+		"username": "testuser37",
+		"nickname": "서예원24",
+		"age": 27,
+		"profile_img": "images/default_profile.png",
+		"salary": 114924000,
+		"wealth": 400723000,
+		"tendency": 8,
+		"password": "pbkdf2_sha256$600000$Jhoq5xCllkYewNgFsjCWws$XvIKejmQE4Y3jI5K621/61erUTsiUMy27f0IcjTVqHQ=",
+		"desirePeriod": 12,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			11,
+			2,
+			24
+		],
+		"saving": [
+			54,
+			14,
+			8
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 38,
+	"fields": {
+		"username": "testuser38",
+		"nickname": "문민은63",
+		"age": 40,
+		"profile_img": "images/default_profile.png",
+		"salary": 70454000,
+		"wealth": 729786000,
+		"tendency": 8,
+		"password": "pbkdf2_sha256$600000$v0SWs5Oyz10sLCDTiFCGWn$Js747sJupyRV7xQqufsxQLrsMvcwlthpSRcDMlz9pFo=",
+		"desirePeriod": 24,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			37,
+			18,
+			2
+		],
+		"saving": [
+			55,
+			18,
+			54
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 39,
+	"fields": {
+		"username": "testuser39",
+		"nickname": "오현환43",
+		"age": 91,
+		"profile_img": "images/default_profile.png",
+		"salary": 59879000,
+		"wealth": 317814000,
+		"tendency": 5,
+		"password": "pbkdf2_sha256$600000$izOCgO0IkG2Zp6BjZuleRh$M3AXszbBZkrPnS9v2Ef378eVAuVdQGKsvSXVvmVUBBw=",
+		"desirePeriod": 24,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			31,
+			23,
+			33
+		],
+		"saving": [
+			14,
+			21,
+			38
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 40,
+	"fields": {
+		"username": "testuser40",
+		"nickname": "손지영62",
+		"age": 64,
+		"profile_img": "images/default_profile.png",
+		"salary": 107885000,
+		"wealth": 460386000,
+		"tendency": 8,
+		"password": "pbkdf2_sha256$600000$GGmURoPR9rOiIzGtoeE0Vp$/tZhx7eqxxXjrpg5VRchBnGn0EZBUFH0cAkcMZdnflQ=",
+		"desirePeriod": 6,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			21,
+			28,
+			25
+		],
+		"saving": [
+			22,
+			53,
+			14
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 41,
+	"fields": {
+		"username": "testuser41",
+		"nickname": "정현경40",
+		"age": 99,
+		"profile_img": "images/default_profile.png",
+		"salary": 53663000,
+		"wealth": 175304000,
+		"tendency": 6,
+		"password": "pbkdf2_sha256$600000$AAGRCyucapdvtnBuWPSe8M$vnORmuJAt/4pwYEGIsdLKtsfksmrSn79B7VERqVH9l4=",
+		"desirePeriod": 12,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			7,
+			26,
+			18
+		],
+		"saving": [
+			40,
+			57,
+			17
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 42,
+	"fields": {
+		"username": "testuser42",
+		"nickname": "오예은37",
+		"age": 42,
+		"profile_img": "images/default_profile.png",
+		"salary": 34881000,
+		"wealth": 779863000,
+		"tendency": 0,
+		"password": "pbkdf2_sha256$600000$LmWDB9aXj3BdgHGusI4UNV$UivXGGdKtKChyt2AC6iPGxcnsn2eJ/x5VEcNozswjho=",
+		"desirePeriod": 36,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			26,
+			25,
+			10
+		],
+		"saving": [
+			61,
+			41,
+			8
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 43,
+	"fields": {
+		"username": "testuser43",
+		"nickname": "유효후98",
+		"age": 83,
+		"profile_img": "images/default_profile.png",
+		"salary": 127805000,
+		"wealth": 768973000,
+		"tendency": 5,
+		"password": "pbkdf2_sha256$600000$4eDEY6QkMIfkuxKhep622l$6FCo+OEtYIupXMiJxP+/YevNs5EFhlGnssvdMPvTWEo=",
+		"desirePeriod": 36,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			24,
+			15,
+			29
+		],
+		"saving": [
+			41,
+			36,
+			50
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 44,
+	"fields": {
+		"username": "testuser44",
+		"nickname": "신예환8",
+		"age": 83,
+		"profile_img": "images/default_profile.png",
+		"salary": 80234000,
+		"wealth": 871751000,
+		"tendency": 10,
+		"password": "pbkdf2_sha256$600000$oc69m6ppokgF0xlrbJ1eKU$ViK738si31w1fCrexaJ+VjSBP1CBENXnhsYDlXvdG7s=",
+		"desirePeriod": 12,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			6,
+			25,
+			16
+		],
+		"saving": [
+			16,
+			1,
+			15
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 45,
+	"fields": {
+		"username": "testuser45",
+		"nickname": "전승윤45",
+		"age": 37,
+		"profile_img": "images/default_profile.png",
+		"salary": 34566000,
+		"wealth": 411879000,
+		"tendency": 4,
+		"password": "pbkdf2_sha256$600000$677VjI3uTLqBBZLnRr3Yzd$lR6pnHz1aM1zgLOqSWoRUIED93v2HPwDFPIiYG4IRvc=",
+		"desirePeriod": 6,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			3,
+			9,
+			20
+		],
+		"saving": [
+			40,
+			12,
+			57
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 46,
+	"fields": {
+		"username": "testuser46",
+		"nickname": "유주연59",
+		"age": 61,
+		"profile_img": "images/default_profile.png",
+		"salary": 36907000,
+		"wealth": 546126000,
+		"tendency": 7,
+		"password": "pbkdf2_sha256$600000$OofmhuLWFQ03XykNkzb0Ma$QgO4E1cI04i39/AxCb1et1zijmqkx/pt3mltr0b7510=",
+		"desirePeriod": 6,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			18,
+			20,
+			4
+		],
+		"saving": [
+			43,
+			46,
+			29
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 47,
+	"fields": {
+		"username": "testuser47",
+		"nickname": "손서윤83",
+		"age": 84,
+		"profile_img": "images/default_profile.png",
+		"salary": 119162000,
+		"wealth": 482979000,
+		"tendency": 3,
+		"password": "pbkdf2_sha256$600000$RMTTdFTjDRqH9iiVt1cCMK$Jl6fo7NCmjwG5mQNV6Hp7ETlGc5j0nMMZfeY8oFCaYI=",
+		"desirePeriod": 12,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			17,
+			14,
+			14
+		],
+		"saving": [
+			46,
+			26,
+			51
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 48,
+	"fields": {
+		"username": "testuser48",
+		"nickname": "배경우9",
+		"age": 42,
+		"profile_img": "images/default_profile.png",
+		"salary": 78461000,
+		"wealth": 784964000,
+		"tendency": 6,
+		"password": "pbkdf2_sha256$600000$t6SuAIjv006Z5jdGNeeZPR$RpFVX2I4YiCqUWIA5ozHqG0dFAs7znjJiqmtgEzPc0M=",
+		"desirePeriod": 12,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			6,
+			3,
+			18
+		],
+		"saving": [
+			24,
+			44,
+			50
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 49,
+	"fields": {
+		"username": "testuser49",
+		"nickname": "박주서70",
+		"age": 87,
+		"profile_img": "images/default_profile.png",
+		"salary": 46050000,
+		"wealth": 690825000,
+		"tendency": 2,
+		"password": "pbkdf2_sha256$600000$UqLdLDhF5ntLlgy5R7TWpo$/xLNg8AOwLc1C42W+bg8oPHT+bCE5j6WRjqKMeiRgmA=",
+		"desirePeriod": 36,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			23,
+			16,
+			14
+		],
+		"saving": [
+			17,
+			60,
+			42
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 50,
+	"fields": {
+		"username": "testuser50",
+		"nickname": "신효인63",
+		"age": 80,
+		"profile_img": "images/default_profile.png",
+		"salary": 30970000,
+		"wealth": 981109000,
+		"tendency": 3,
+		"password": "pbkdf2_sha256$600000$xhUeeTOQa6aJKErpmA8ybK$tmq6dkOpLTq+HZSnPvI36lL9temSanD0nX7yEUEY1hg=",
+		"desirePeriod": 6,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			18,
+			27,
+			3
+		],
+		"saving": [
+			25,
+			5,
+			40
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 51,
+	"fields": {
+		"username": "testuser51",
+		"nickname": "손경윤22",
+		"age": 70,
+		"profile_img": "images/default_profile.png",
+		"salary": 103368000,
+		"wealth": 715722000,
+		"tendency": 6,
+		"password": "pbkdf2_sha256$600000$o0L4OcLKoZT9xheAjV7bBo$jUbjmHn8ekaUJrDzF9Z/fbeYkor1B01+bwHyO4fLt3o=",
+		"desirePeriod": 24,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			24,
+			12,
+			17
+		],
+		"saving": [
+			10,
+			60,
+			59
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 52,
+	"fields": {
+		"username": "testuser52",
+		"nickname": "신도후97",
+		"age": 77,
+		"profile_img": "images/default_profile.png",
+		"salary": 91730000,
+		"wealth": 643794000,
+		"tendency": 4,
+		"password": "pbkdf2_sha256$600000$GMoSUn8oi3uzUas1cMFfus$wzOly4nMPJxThkzUaXf1ZVuipokHj+KLjVcufoRVfIg=",
+		"desirePeriod": 6,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			5,
+			21,
+			19
+		],
+		"saving": [
+			64,
+			28,
+			37
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 53,
+	"fields": {
+		"username": "testuser53",
+		"nickname": "서승호57",
+		"age": 73,
+		"profile_img": "images/default_profile.png",
+		"salary": 121600000,
+		"wealth": 615313000,
+		"tendency": 1,
+		"password": "pbkdf2_sha256$600000$SYY5m6egIZDI6BVsVT9iGi$/uBJKjdC5OL8bcs8mqcLqDWpQSkAd4vHFMjlBity+Cc=",
+		"desirePeriod": 24,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			22,
+			18,
+			33
+		],
+		"saving": [
+			46,
+			39,
+			55
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 54,
+	"fields": {
+		"username": "testuser54",
+		"nickname": "이주서93",
+		"age": 76,
+		"profile_img": "images/default_profile.png",
+		"salary": 97670000,
+		"wealth": 540360000,
+		"tendency": 6,
+		"password": "pbkdf2_sha256$600000$LrMnSo0GW5dF7ruQJvBBvX$wYk1BXnj/QPW72Eb5r1iaYMFuUmBcH66URnnC0gPB+8=",
+		"desirePeriod": 36,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			18,
+			25,
+			22
+		],
+		"saving": [
+			42,
+			45,
+			18
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 55,
+	"fields": {
+		"username": "testuser55",
+		"nickname": "전승우15",
+		"age": 38,
+		"profile_img": "images/default_profile.png",
+		"salary": 35223000,
+		"wealth": 557189000,
+		"tendency": 4,
+		"password": "pbkdf2_sha256$600000$p4g5IIpknokJaDFIEiMOeV$U4VAJLtpSEQt1dUkg64wQaLnRFnr67YEZ2zQpbR5iIE=",
+		"desirePeriod": 36,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			7,
+			26,
+			1
+		],
+		"saving": [
+			40,
+			64,
+			7
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 56,
+	"fields": {
+		"username": "testuser56",
+		"nickname": "황지진75",
+		"age": 40,
+		"profile_img": "images/default_profile.png",
+		"salary": 73241000,
+		"wealth": 461264000,
+		"tendency": 8,
+		"password": "pbkdf2_sha256$600000$KVm1KbkMIdZ3UarsJyE6CZ$ikeJW8wm5QUsvUxDk8oOvM2zMLDI+IINZPkad9EJ4gM=",
+		"desirePeriod": 6,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			12,
+			18,
+			9
+		],
+		"saving": [
+			39,
+			54,
+			49
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 57,
+	"fields": {
+		"username": "testuser57",
+		"nickname": "최경수23",
+		"age": 42,
+		"profile_img": "images/default_profile.png",
+		"salary": 47526000,
+		"wealth": 282391000,
+		"tendency": 0,
+		"password": "pbkdf2_sha256$600000$F64YN6qFZNQeyR2RzIVVVn$yAtdPx/Wg0OjXZGXecE63qw8olxt9b/TsRbqJLgK5e8=",
+		"desirePeriod": 6,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			19,
+			8,
+			4
+		],
+		"saving": [
+			13,
+			32,
+			14
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 58,
+	"fields": {
+		"username": "testuser58",
+		"nickname": "최도경58",
+		"age": 58,
+		"profile_img": "images/default_profile.png",
+		"salary": 144891000,
+		"wealth": 772621000,
+		"tendency": 5,
+		"password": "pbkdf2_sha256$600000$wsUoxYkLLidJcadpRAFkXr$n46jwoFdZC4t7UnCRPwXmh7wghqzsDeGX6s2UfPtwiw=",
+		"desirePeriod": 24,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			19,
+			1,
+			26
+		],
+		"saving": [
+			9,
+			8,
+			7
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 59,
+	"fields": {
+		"username": "testuser59",
+		"nickname": "오도우99",
+		"age": 24,
+		"profile_img": "images/default_profile.png",
+		"salary": 88986000,
+		"wealth": 149504000,
+		"tendency": 9,
+		"password": "pbkdf2_sha256$600000$R5RS88PU0KGQm73963rdFG$wNnRZ0QPppHN95JkUdMHd1ZJVm0Q3zQZgAnwRu4LUBs=",
+		"desirePeriod": 24,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			20,
+			1,
+			3
+		],
+		"saving": [
+			29,
+			61,
+			47
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 60,
+	"fields": {
+		"username": "testuser60",
+		"nickname": "윤현영65",
+		"age": 43,
+		"profile_img": "images/default_profile.png",
+		"salary": 57848000,
+		"wealth": 754984000,
+		"tendency": 4,
+		"password": "pbkdf2_sha256$600000$n6Y8UGVLX8E8A35MTta5cM$L241GJ3IX8BjanjuO+ccUrb2CcslSHmrMzHiVInE0gw=",
+		"desirePeriod": 36,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			12,
+			30,
+			28
+		],
+		"saving": [
+			25,
+			64,
+			42
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 61,
+	"fields": {
+		"username": "testuser61",
+		"nickname": "강현서85",
+		"age": 76,
+		"profile_img": "images/default_profile.png",
+		"salary": 136988000,
+		"wealth": 510060000,
+		"tendency": 6,
+		"password": "pbkdf2_sha256$600000$opSPwk7HC2TXBrJA9rek9I$/K/E9MOpGtNVU+Iubrz7j14CWGtSaxnXc2EUoxdDjEo=",
+		"desirePeriod": 6,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			27,
+			2,
+			9
+		],
+		"saving": [
+			28,
+			60,
+			54
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 62,
+	"fields": {
+		"username": "testuser62",
+		"nickname": "박경진59",
+		"age": 24,
+		"profile_img": "images/default_profile.png",
+		"salary": 106605000,
+		"wealth": 431001000,
+		"tendency": 5,
+		"password": "pbkdf2_sha256$600000$nm76X8rR0ATzejOO2xTrba$TcVl+a/TrUcrlkWiIx24kt5u7Voqw0bBkQ/JV+RlaV8=",
+		"desirePeriod": 12,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			30,
+			8,
+			14
+		],
+		"saving": [
+			19,
+			9,
+			37
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 63,
+	"fields": {
+		"username": "testuser63",
+		"nickname": "양서아64",
+		"age": 20,
+		"profile_img": "images/default_profile.png",
+		"salary": 31660000,
+		"wealth": 321449000,
+		"tendency": 6,
+		"password": "pbkdf2_sha256$600000$nZddDSWebbCgW24I0XxSPf$E6a2CLnWPuzntlniatsxUBmzyLKCaVNXFv8jUbugdKs=",
+		"desirePeriod": 6,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			35,
+			17,
+			32
+		],
+		"saving": [
+			24,
+			6,
+			35
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 64,
+	"fields": {
+		"username": "testuser64",
+		"nickname": "서경수69",
+		"age": 72,
+		"profile_img": "images/default_profile.png",
+		"salary": 139377000,
+		"wealth": 906477000,
+		"tendency": 0,
+		"password": "pbkdf2_sha256$600000$X0PF7Voi4Va3OaTlCpvDDY$fQyoFrTN8bJ4MWUizpFNNJGHBfO8FIMQULWkmhkaWdU=",
+		"desirePeriod": 36,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			16,
+			1,
+			37
+		],
+		"saving": [
+			8,
+			49,
+			62
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 65,
+	"fields": {
+		"username": "testuser65",
+		"nickname": "조진윤48",
+		"age": 58,
+		"profile_img": "images/default_profile.png",
+		"salary": 85793000,
+		"wealth": 165851000,
+		"tendency": 3,
+		"password": "pbkdf2_sha256$600000$ki5C5eTIFKN2ME6zhGMKg1$cGwLaFUNCRWjBKJSYd1q/TnmVC0EE5nAumpUuNlAZn0=",
+		"desirePeriod": 36,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			20,
+			20,
+			21
+		],
+		"saving": [
+			20,
+			1,
+			38
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 66,
+	"fields": {
+		"username": "testuser66",
+		"nickname": "백채진61",
+		"age": 66,
+		"profile_img": "images/default_profile.png",
+		"salary": 131376000,
+		"wealth": 342530000,
+		"tendency": 0,
+		"password": "pbkdf2_sha256$600000$WMnmhfQLjvZjtljPUvjra5$IZB9RYiRIkYfDWvGRJXwKzon/UFV74TPvPbaPxRyPyw=",
+		"desirePeriod": 36,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			23,
+			5,
+			7
+		],
+		"saving": [
+			14,
+			59,
+			28
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 67,
+	"fields": {
+		"username": "testuser67",
+		"nickname": "문채은45",
+		"age": 100,
+		"profile_img": "images/default_profile.png",
+		"salary": 41804000,
+		"wealth": 198499000,
+		"tendency": 1,
+		"password": "pbkdf2_sha256$600000$uqFB9PVwENC21aqfxENgbj$KJUoqmXOmvTNQ9rzC1P1a2gKAVrRlvNWjQ7u9fzDh5A=",
+		"desirePeriod": 24,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			8,
+			36,
+			13
+		],
+		"saving": [
+			26,
+			25,
+			54
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 68,
+	"fields": {
+		"username": "testuser68",
+		"nickname": "황진경14",
+		"age": 72,
+		"profile_img": "images/default_profile.png",
+		"salary": 42154000,
+		"wealth": 798174000,
+		"tendency": 1,
+		"password": "pbkdf2_sha256$600000$YOASZsGlVTRZJ2DG2WfLd3$70PsRQTymTe8c3lfWnz9Ogv8SNdu0M76bnpaqpFKr/s=",
+		"desirePeriod": 12,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			10,
+			30,
+			37
+		],
+		"saving": [
+			64,
+			46,
+			47
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 69,
+	"fields": {
+		"username": "testuser69",
+		"nickname": "조현연29",
+		"age": 28,
+		"profile_img": "images/default_profile.png",
+		"salary": 71568000,
+		"wealth": 483908000,
+		"tendency": 5,
+		"password": "pbkdf2_sha256$600000$75AV7vIYLsNMh6zgq7WwRM$ZFBz1uEwcCbCsDUPgWtI2TzyvvtlxppUxfrD93fXlgk=",
+		"desirePeriod": 6,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			24,
+			32,
+			32
+		],
+		"saving": [
+			18,
+			24,
+			39
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 70,
+	"fields": {
+		"username": "testuser70",
+		"nickname": "조도우42",
+		"age": 73,
+		"profile_img": "images/default_profile.png",
+		"salary": 61415000,
+		"wealth": 440311000,
+		"tendency": 2,
+		"password": "pbkdf2_sha256$600000$ZOQRihcj8giJbTnbQAcaR7$rutnrXmV2s/3odYqwUTMFz7T545/ifzZK+5KhvFgQjM=",
+		"desirePeriod": 24,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			33,
+			17,
+			13
+		],
+		"saving": [
+			58,
+			41,
+			2
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 71,
+	"fields": {
+		"username": "testuser71",
+		"nickname": "강채우64",
+		"age": 43,
+		"profile_img": "images/default_profile.png",
+		"salary": 91993000,
+		"wealth": 126889000,
+		"tendency": 5,
+		"password": "pbkdf2_sha256$600000$nXk3sD6xGeEaxK3PU6pg0t$qVpexSPyl+mSgfR1pit7FkrxN8dLPG+eTgBQ+6MkDHo=",
+		"desirePeriod": 36,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			33,
+			19,
+			9
+		],
+		"saving": [
+			57,
+			15,
+			59
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 72,
+	"fields": {
+		"username": "testuser72",
+		"nickname": "서효윤1",
+		"age": 89,
+		"profile_img": "images/default_profile.png",
+		"salary": 99476000,
+		"wealth": 572300000,
+		"tendency": 0,
+		"password": "pbkdf2_sha256$600000$G34ogbUHtv0jGzagbYltAt$PPXQn4sexo778lpbFkIN6G07kvbU1rom9Fcc5UzdNnk=",
+		"desirePeriod": 24,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			7,
+			28,
+			11
+		],
+		"saving": [
+			11,
+			29,
+			20
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 73,
+	"fields": {
+		"username": "testuser73",
+		"nickname": "유하연36",
+		"age": 65,
+		"profile_img": "images/default_profile.png",
+		"salary": 60033000,
+		"wealth": 847420000,
+		"tendency": 8,
+		"password": "pbkdf2_sha256$600000$ta6dHo7iAkQSCuCOZhPWnl$HupLTqvPT9yBJCFuOaAOy9Zj0GBigLfkcXAV2NjFzWk=",
+		"desirePeriod": 12,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			24,
+			4,
+			37
+		],
+		"saving": [
+			53,
+			9,
+			34
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 74,
+	"fields": {
+		"username": "testuser74",
+		"nickname": "장세우26",
+		"age": 50,
+		"profile_img": "images/default_profile.png",
+		"salary": 140840000,
+		"wealth": 323568000,
+		"tendency": 5,
+		"password": "pbkdf2_sha256$600000$WhhaiC9DcKFrVczNXt3Izu$vuyLnbvUcg1p92TaCO1R8HzW+ZobZL22ELqctI3KgQw=",
+		"desirePeriod": 24,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			12,
+			14,
+			6
+		],
+		"saving": [
+			34,
+			19,
+			14
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 75,
+	"fields": {
+		"username": "testuser75",
+		"nickname": "강하영45",
+		"age": 76,
+		"profile_img": "images/default_profile.png",
+		"salary": 139274000,
+		"wealth": 935729000,
+		"tendency": 1,
+		"password": "pbkdf2_sha256$600000$hbly0ooONiezl7o1OXgZza$+BvkEnWUHAS1mmWgW28zuVuOI/NrMBazZCZFpkd3NdQ=",
+		"desirePeriod": 24,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			32,
+			16,
+			20
+		],
+		"saving": [
+			21,
+			48,
+			55
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 76,
+	"fields": {
+		"username": "testuser76",
+		"nickname": "백서준12",
+		"age": 97,
+		"profile_img": "images/default_profile.png",
+		"salary": 125214000,
+		"wealth": 476310000,
+		"tendency": 6,
+		"password": "pbkdf2_sha256$600000$bLVA1HrU7rNEovNxC83aLC$Op+XXGJMgRrnxXomepzqR/IkMOBrinNe7nrlfOHb01U=",
+		"desirePeriod": 36,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			17,
+			23,
+			28
+		],
+		"saving": [
+			33,
+			41,
+			54
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 77,
+	"fields": {
+		"username": "testuser77",
+		"nickname": "오예진60",
+		"age": 53,
+		"profile_img": "images/default_profile.png",
+		"salary": 39625000,
+		"wealth": 395021000,
+		"tendency": 8,
+		"password": "pbkdf2_sha256$600000$opGxPzQhvpqbj508XGRXHT$dNTJ+tY6y4bryp+K8xXUTPxWusy5KTaEIWvHvpYBbPY=",
+		"desirePeriod": 36,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			2,
+			37,
+			21
+		],
+		"saving": [
+			27,
+			23,
+			49
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 78,
+	"fields": {
+		"username": "testuser78",
+		"nickname": "손효수40",
+		"age": 59,
+		"profile_img": "images/default_profile.png",
+		"salary": 110479000,
+		"wealth": 315292000,
+		"tendency": 9,
+		"password": "pbkdf2_sha256$600000$jvkNeVbFUpOcIB8C3ygi10$7ZCf7ZMSIE+CSp8hjd7es90OlHjTBeRg7VGQw55cENM=",
+		"desirePeriod": 12,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			16,
+			37,
+			23
+		],
+		"saving": [
+			26,
+			51,
+			32
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 79,
+	"fields": {
+		"username": "testuser79",
+		"nickname": "손도후43",
+		"age": 69,
+		"profile_img": "images/default_profile.png",
+		"salary": 121097000,
+		"wealth": 794461000,
+		"tendency": 5,
+		"password": "pbkdf2_sha256$600000$3Ed0wVuPfNyv014DfkKUOz$8pqZbiFa9ofQ9S1/G3D1fMtjU0/IJjATGCZWyHwsfXE=",
+		"desirePeriod": 6,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			32,
+			1,
+			33
+		],
+		"saving": [
+			51,
+			7,
+			43
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 80,
+	"fields": {
+		"username": "testuser80",
+		"nickname": "조민영95",
+		"age": 24,
+		"profile_img": "images/default_profile.png",
+		"salary": 149961000,
+		"wealth": 788572000,
+		"tendency": 4,
+		"password": "pbkdf2_sha256$600000$vHYlCdp5cmZDc7YVlpCdrE$76vS5u5OgtVH9LIs6Rlf4+qrmo4F9C6B17s6kfxzqAE=",
+		"desirePeriod": 24,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			32,
+			7,
+			7
+		],
+		"saving": [
+			14,
+			48,
+			47
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 81,
+	"fields": {
+		"username": "testuser81",
+		"nickname": "유현아73",
+		"age": 97,
+		"profile_img": "images/default_profile.png",
+		"salary": 121719000,
+		"wealth": 907846000,
+		"tendency": 3,
+		"password": "pbkdf2_sha256$600000$nUrTA4ybankqzxWVKy71mF$BR2KOLdaXwKCR2/V/oKrkomytObbP7XFJym0Ifep2WE=",
+		"desirePeriod": 36,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			8,
+			25,
+			7
+		],
+		"saving": [
+			5,
+			44,
+			39
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 82,
+	"fields": {
+		"username": "testuser82",
+		"nickname": "배효영84",
+		"age": 59,
+		"profile_img": "images/default_profile.png",
+		"salary": 56586000,
+		"wealth": 179657000,
+		"tendency": 0,
+		"password": "pbkdf2_sha256$600000$Ynrtb08CvLKYkH6UTuA9wJ$ZkyoUaxPrfNSTt2QJLbHYdD5G7FwvYLYJWod+hsuWCM=",
+		"desirePeriod": 6,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			28,
+			17,
+			37
+		],
+		"saving": [
+			33,
+			47,
+			63
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 83,
+	"fields": {
+		"username": "testuser83",
+		"nickname": "임민후23",
+		"age": 83,
+		"profile_img": "images/default_profile.png",
+		"salary": 100719000,
+		"wealth": 900229000,
+		"tendency": 8,
+		"password": "pbkdf2_sha256$600000$9MgGBl3QaIsWPWHQi97EXR$XVV7NyXQn2ZoEv+624j4eLrmrgFOuFKXEEqzVD5joIU=",
+		"desirePeriod": 36,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			23,
+			12,
+			27
+		],
+		"saving": [
+			33,
+			11,
+			23
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 84,
+	"fields": {
+		"username": "testuser84",
+		"nickname": "조승우39",
+		"age": 35,
+		"profile_img": "images/default_profile.png",
+		"salary": 139354000,
+		"wealth": 611328000,
+		"tendency": 4,
+		"password": "pbkdf2_sha256$600000$cNyhIXQoEsFhGlRyF6RONW$awhLK2tdVnRPjM9CYvekePkY6Xykzlu4Tf6p/inqkSs=",
+		"desirePeriod": 6,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			36,
+			2,
+			22
+		],
+		"saving": [
+			31,
+			58,
+			24
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 85,
+	"fields": {
+		"username": "testuser85",
+		"nickname": "정서서70",
+		"age": 96,
+		"profile_img": "images/default_profile.png",
+		"salary": 52426000,
+		"wealth": 579411000,
+		"tendency": 0,
+		"password": "pbkdf2_sha256$600000$Q8nswZemhi9ZhpNjMrdSpe$txnFrmIS/UPYC6F7qa8/S2Ws2J4Mv94YgsK01ox9L9Y=",
+		"desirePeriod": 24,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			5,
+			25,
+			30
+		],
+		"saving": [
+			61,
+			61,
+			6
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 86,
+	"fields": {
+		"username": "testuser86",
+		"nickname": "유세아47",
+		"age": 47,
+		"profile_img": "images/default_profile.png",
+		"salary": 119806000,
+		"wealth": 378166000,
+		"tendency": 5,
+		"password": "pbkdf2_sha256$600000$OqHzfjHzN41FFs1Qyi1goy$I9EziTZrO6JmCzPURVtuAJjF8hQKSzStOMOQQdYTKRA=",
+		"desirePeriod": 24,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			21,
+			2,
+			2
+		],
+		"saving": [
+			20,
+			49,
+			16
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 87,
+	"fields": {
+		"username": "testuser87",
+		"nickname": "신효진46",
+		"age": 22,
+		"profile_img": "images/default_profile.png",
+		"salary": 36001000,
+		"wealth": 747855000,
+		"tendency": 2,
+		"password": "pbkdf2_sha256$600000$89Fg8nJUciG2W7A4Xxomlp$fij8LH9SmXmJpvNSU5ihmEp55ZJa3vPYgdxC0l93vhA=",
+		"desirePeriod": 24,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			1,
+			31,
+			16
+		],
+		"saving": [
+			5,
+			27,
+			41
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 88,
+	"fields": {
+		"username": "testuser88",
+		"nickname": "장승수75",
+		"age": 94,
+		"profile_img": "images/default_profile.png",
+		"salary": 94926000,
+		"wealth": 211309000,
+		"tendency": 4,
+		"password": "pbkdf2_sha256$600000$YGq8nBd4YUliQ0A5XiA8TK$xanSdIlNB5IfsybD3fy2oKanFGPf8bjP1nHZ4oEEkak=",
+		"desirePeriod": 6,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			6,
+			30,
+			11
+		],
+		"saving": [
+			24,
+			11,
+			38
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 89,
+	"fields": {
+		"username": "testuser89",
+		"nickname": "양민준58",
+		"age": 35,
+		"profile_img": "images/default_profile.png",
+		"salary": 143160000,
+		"wealth": 27639000,
+		"tendency": 10,
+		"password": "pbkdf2_sha256$600000$uFp9INbqfqpt0OCZMhTQB0$FVvObNQPjsp/jqA0xKDH7PIqp5uSG5QzOutk3AQaIjU=",
+		"desirePeriod": 12,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			7,
+			26,
+			27
+		],
+		"saving": [
+			10,
+			30,
+			41
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 90,
+	"fields": {
+		"username": "testuser90",
+		"nickname": "양진혁43",
+		"age": 99,
+		"profile_img": "images/default_profile.png",
+		"salary": 91299000,
+		"wealth": 684855000,
+		"tendency": 7,
+		"password": "pbkdf2_sha256$600000$HF5P4LQUhjYnzT0FKnppTM$sleetv31XnqsuQjjYNmjTReku0yXpud+6fR033yYtgI=",
+		"desirePeriod": 36,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			1,
+			17,
+			20
+		],
+		"saving": [
+			7,
+			7,
+			35
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 91,
+	"fields": {
+		"username": "testuser91",
+		"nickname": "오지호90",
+		"age": 94,
+		"profile_img": "images/default_profile.png",
+		"salary": 123690000,
+		"wealth": 492799000,
+		"tendency": 6,
+		"password": "pbkdf2_sha256$600000$xpQtRPraCCeSG8OPZn5W2t$EFUWuCEQ/ZEtJl4+cMFejsl3RX7zZJd1dEzwYbTzvT8=",
+		"desirePeriod": 24,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			34,
+			27,
+			10
+		],
+		"saving": [
+			38,
+			43,
+			35
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 92,
+	"fields": {
+		"username": "testuser92",
+		"nickname": "한서호77",
+		"age": 98,
+		"profile_img": "images/default_profile.png",
+		"salary": 50118000,
+		"wealth": 532933000,
+		"tendency": 4,
+		"password": "pbkdf2_sha256$600000$8EHH3KiJJVhmnSA18HATnt$kLnrFYHFursnKkBnN7J0x739ioAxKykIuNQLKDM201I=",
+		"desirePeriod": 36,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			11,
+			23,
+			32
+		],
+		"saving": [
+			26,
+			1,
+			10
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 93,
+	"fields": {
+		"username": "testuser93",
+		"nickname": "박서연11",
+		"age": 33,
+		"profile_img": "images/default_profile.png",
+		"salary": 113703000,
+		"wealth": 76146000,
+		"tendency": 3,
+		"password": "pbkdf2_sha256$600000$9xoX6KhxDjMlXQDMLhUUhk$h+XfJbxydThA/qJ5Doqlj4OWl8hH7Gt8b/UADCOawK0=",
+		"desirePeriod": 36,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			33,
+			17,
+			5
+		],
+		"saving": [
+			10,
+			45,
+			5
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 94,
+	"fields": {
+		"username": "testuser94",
+		"nickname": "황승후38",
+		"age": 48,
+		"profile_img": "images/default_profile.png",
+		"salary": 77738000,
+		"wealth": 698963000,
+		"tendency": 8,
+		"password": "pbkdf2_sha256$600000$en0dx2gs1dUNZrR9SqQkCo$N+9Kbm5uoxu7Uz6gTBINe5M6hTdeEPhxandDQln7SP4=",
+		"desirePeriod": 6,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			8,
+			27,
+			31
+		],
+		"saving": [
+			15,
+			36,
+			38
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 95,
+	"fields": {
+		"username": "testuser95",
+		"nickname": "백지환14",
+		"age": 51,
+		"profile_img": "images/default_profile.png",
+		"salary": 35291000,
+		"wealth": 851661000,
+		"tendency": 7,
+		"password": "pbkdf2_sha256$600000$FpbhZeI57VondRErt6faXe$JK99yXsxv7j64uGX1cJnayNQG2VUIBdgYUnGMIHRCqo=",
+		"desirePeriod": 24,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			27,
+			3,
+			7
+		],
+		"saving": [
+			56,
+			51,
+			6
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 96,
+	"fields": {
+		"username": "testuser96",
+		"nickname": "손하아49",
+		"age": 86,
+		"profile_img": "images/default_profile.png",
+		"salary": 90963000,
+		"wealth": 171704000,
+		"tendency": 3,
+		"password": "pbkdf2_sha256$600000$hnyvZ6oZV4OkH04fuB8VZD$wTTyl5t/h7m3DyzrOjKlKcpK+sw6qwJKbJNyTwXtBmo=",
+		"desirePeriod": 12,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			30,
+			22,
+			24
+		],
+		"saving": [
+			47,
+			39,
+			33
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 97,
+	"fields": {
+		"username": "testuser97",
+		"nickname": "손예은59",
+		"age": 99,
+		"profile_img": "images/default_profile.png",
+		"salary": 136492000,
+		"wealth": 432639000,
+		"tendency": 1,
+		"password": "pbkdf2_sha256$600000$SQTUbrs0CJ0HSXU2sM9VoJ$lGLH88NmRIUlTheDZtNZ9HudnNrDyK3p/0ZtPFq2oTQ=",
+		"desirePeriod": 36,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			15,
+			22,
+			7
+		],
+		"saving": [
+			62,
+			46,
+			28
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 98,
+	"fields": {
+		"username": "testuser98",
+		"nickname": "배윤아3",
+		"age": 47,
+		"profile_img": "images/default_profile.png",
+		"salary": 94329000,
+		"wealth": 254317000,
+		"tendency": 0,
+		"password": "pbkdf2_sha256$600000$e174jYE9eoo3y05adB4CCV$He6SVvLsb7i8nFPxqOEEm++BOeumGgJ8Mh1xwoJnxtM=",
+		"desirePeriod": 6,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			29,
+			29,
+			35
+		],
+		"saving": [
+			36,
+			33,
+			63
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 99,
+	"fields": {
+		"username": "testuser99",
+		"nickname": "최서호5",
+		"age": 20,
+		"profile_img": "images/default_profile.png",
+		"salary": 76657000,
+		"wealth": 368490000,
+		"tendency": 6,
+		"password": "pbkdf2_sha256$600000$NwS2TKnK6kNK39wLvflWdl$RiYX5mNqTQ3oQEmZ4mQIZzAGM+RXOXLLId7ZP9phhFQ=",
+		"desirePeriod": 36,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			22,
+			22,
+			15
+		],
+		"saving": [
+			34,
+			35,
+			12
+		]
+	}
+},{
+	"model": "accounts.User",
+	"pk": 100,
+	"fields": {
+		"username": "testuser100",
+		"nickname": "문민수83",
+		"age": 54,
+		"profile_img": "images/default_profile.png",
+		"salary": 95409000,
+		"wealth": 605353000,
+		"tendency": 7,
+		"password": "pbkdf2_sha256$600000$V4Zb2wYKazQ1xyNnajtvW3$G+p32TjN4Egsr3FjSpLrMC9qAemQbtzKWLHTRJK9yeY=",
+		"desirePeriod": 12,
+		"is_active": true,
+		"is_staff": false,
+		"is_superuser": false,
+		"deposit": [
+			16,
+			21,
+			6
+		],
+		"saving": [
+			28,
+			46,
+			1
+		]
+	}
+}]
