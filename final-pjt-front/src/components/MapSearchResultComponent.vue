@@ -10,14 +10,14 @@
             <h4>{{ result.kor_co_nm }}</h4>
           </v-card-subtitle>
         </v-card>
-        <v-dialog v-model="depositDialog">
-          <DepositDetailComponent @close-dialog="depositDialog = false" />
-        </v-dialog>
-        <v-dialog v-model="savingDialog">
-          <SavingDetailComponent @close-dialog="savingDialog = false" />
-        </v-dialog>
       </v-col>
     </v-row>
+    <v-dialog v-model="depositDialog" width="1000">
+      <DepositDetailComponent @close-dialog="depositDialog = false" />
+    </v-dialog>
+    <v-dialog v-model="savingDialog" width="1000">
+      <SavingDetailComponent @close-dialog="savingDialog = false" />
+    </v-dialog>
   </v-container>
 </template>
 
@@ -117,14 +117,13 @@ const searchSaving = function (keyword) {
 };
 
 const openDialog = (result) => {
-  console.log(result.fin_prdt_nm);
   if (result.type === "예금") {
-    depositStore.getDepositData(result.fin_prdt_nm);
-    depositStore.getDepositOptionData(result.fin_prdt_nm);
+    depositStore.getDepositData(result.fin_prdt_cd);
+    depositStore.getDepositOptionData(result.fin_prdt_cd);
     depositDialog.value = true;
   } else if (result.type === "적금") {
-    savingStore.getSavingData(result.fin_prdt_nm);
-    savingStore.getSavingOptionData(result.fin_prdt_nm);
+    savingStore.getSavingData(result.fin_prdt_cd);
+    savingStore.getSavingOptionData(result.fin_prdt_cd);
     savingDialog.value = true;
   }
 };

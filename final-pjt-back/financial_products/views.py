@@ -107,6 +107,7 @@ def get_saving_products(request):
                 serializer.save(saving_product=product)
     return Response('Saving 데이터 가져오기 성공')
 
+# Deposit 상품 출력 List
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def deposit_product_list(request):
@@ -114,7 +115,8 @@ def deposit_product_list(request):
         deposit_products = DepositProduct.objects.all()
         serializer = DepositListSerializer(deposit_products, many=True)
         return Response(serializer.data)
-    
+
+# Saving 상품 출력 List
 @permission_classes([IsAuthenticated])
 @api_view(['GET'])
 def saving_product_list(request):
@@ -123,108 +125,43 @@ def saving_product_list(request):
         serializer = SavingListSerializer(saving_products, many=True)
         return Response(serializer.data)
 
+# 상품 DepositDetail GET
 @api_view(['GET'])
-def deposit_detail(request, deposit_name):
-    deposit = get_object_or_404(DepositProduct, fin_prdt_nm=deposit_name)
+def deposit_detail(request, deposit_code):
+    deposit = get_object_or_404(DepositProduct, fin_prdt_cd=deposit_code)
     if request.method == 'GET':
         serializer = DepositSerializer(deposit)
         return Response(serializer.data)
-    
+
+# 상품 SavingDetail GET
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
-def saving_detail(request, saving_name):
-    saving = get_object_or_404(SavingProduct, fin_prdt_nm=saving_name)
+def saving_detail(request, saving_code):
+    saving = get_object_or_404(SavingProduct, fin_prdt_cd=saving_code)
     if request.method == 'GET':
         serializer = SavingSerializer(saving)
         return Response(serializer.data)
-    
+
+# 상품 DepositOptionDetail GET
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
-def deposit_option_list(request, deposit_name):
-    deposit = get_object_or_404(DepositProduct, fin_prdt_nm=deposit_name)
+def deposit_option_list(request, deposit_code):
+    deposit = get_object_or_404(DepositProduct, fin_prdt_cd=deposit_code)
     deposit_options = DepositOption.objects.filter(deposit_product=deposit)
-
     if request.method == 'GET':
         serializer = DepositOptionSerializer(deposit_options, many=True)
         return Response(serializer.data)
     
+# 상품 SavingOptionDetail GET
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
-def deposit_option_detail(request, deposit_code, option_id):
-    deposit = get_object_or_404(DepositProduct, fin_prdt_cd=deposit_code)
-    option = DepositOption.objects.get(deposit_product=deposit, id=option_id)
-    if request.method == 'GET':
-        serializer = DepositOptionSerializer(option)
-        return Response(serializer.data)
-    
-@api_view(['GET'])
-@permission_classes([IsAuthenticated])
-def saving_option_list(request, saving_name):
-    saving = get_object_or_404(SavingProduct, fin_prdt_nm=saving_name)
+def saving_option_list(request, saving_code):
+    saving = get_object_or_404(SavingProduct, fin_prdt_cd=saving_code)
     saving_options = SavingOption.objects.filter(saving_product=saving)
-
     if request.method == 'GET':
         serializer = SavingOptionSerializer(saving_options, many=True)
         return Response(serializer.data)
 
-@api_view(['GET'])
-@permission_classes([IsAuthenticated])
-def saving_option_detail(request, saving_code, option_id):
-    saving = get_object_or_404(SavingProduct, fin_prdt_cd=saving_code)
-    option = SavingOption.objects.get(saving_product=saving, id=option_id)
-    if request.method == 'GET':
-        serializer = SavingOptionSerializer(option)
-        return Response(serializer.data)
-
-# @api_view(['GET', 'POST', 'DELETE'])
-# def deposit_interest(request, deposit_code):
-#     deposit = get_object_or_404(DepositProduct, fin_prdt_cd=deposit_code)
-#     if request.method == 'GET':
-#         serializer = InterestDepositSerializer(deposit)
-#         return Response(serializer.data)
-    
-#     elif request.method == 'POST':
-#         if request.user not in deposit.interest_user.all():
-#             deposit.interest_user.add(request.user)
-#             serializer = InterestDepositSerializer(deposit, data=request.data, partial=True)
-
-#             if serializer.is_valid(raise_exception=True):
-#                 serializer.save()
-#                 return Response({ "detail": "상품이 추가되었습니다." }, status=status.HTTP_200_OK)
-#         else:
-#             return Response({ "detail": "이미 상품이 존재합니다." }, status=status.HTTP_400_BAD_REQUEST)
-        
-#     elif request.method == 'DELETE':
-#         if request.user in deposit.interest_user.all():
-#             deposit.interest_user.remove(request.user)
-#             return Response({ "detail": "삭제되었습니다." }, status=status.HTTP_204_NO_CONTENT)
-#         else:
-#             return Response({ "detail": "삭제할 항목이 없습니다." }, status=status.HTTP_404_NOT_FOUND)
-
-# @api_view(['GET', 'POST', 'DELETE'])
-# def saving_interest(request, saving_code):
-#     saving = get_object_or_404(DepositProduct, fin_prdt_cd=saving_code)
-#     if request.method == 'GET':
-#         serializer = InterestSavingSerializer(saving)
-#         return Response(serializer.data)
-    
-#     elif request.method == 'POST':
-#         if request.user not in saving.interest_user.all():
-#             saving.interest_user.add(request.user)
-#             serializer = InterestSavingSerializer(saving, data=request.data, partial=True)
-
-#             if serializer.is_valid(raise_exception=True):
-#                 serializer.save()
-#                 return Response({ "detail": "상품이 추가되었습니다." }, status=status.HTTP_200_OK)
-#         else:
-#             return Response({ "detail": "이미 상품이 존재합니다." }, status=status.HTTP_400_BAD_REQUEST)
-        
-#     elif request.method == 'DELETE':
-#         if request.user in saving.interest_user.all():
-#             saving.interest_user.remove(request.user)
-#             return Response({ "detail": "삭제되었습니다." }, status=status.HTTP_204_NO_CONTENT)
-#         else:
-#             return Response({ "detail": "삭제할 항목이 없습니다." }, status=status.HTTP_404_NOT_FOUND)
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def bank_deposit(request, bank_name):
@@ -246,22 +183,6 @@ def bank_saving(request, bank_name):
             return Response(serializer.data)
         else:
             return Response({'detail': '해당 은행의 상품이 없습니다.'}, status=status.HTTP_204_NO_CONTENT)
-
-# 개월 수에 해당하는 상품 + 원하는 기간의 옵션들 출력
-# @api_view(['GET'])
-# def deposit_month(request, month):
-#     if request.method == 'GET':
-#         deposits = DepositProduct.objects.filter(depositoption__save_trm=month).order_by('depositoption__intr_rate')
-#         serializer = DepositMonthSerializer(deposits, many=True, save_trm=month)
-#         return Response(serializer.data)
-
-
-# @api_view(['GET'])
-# def saving_month(request, month):
-#     if request.method == 'GET':
-#         savings = SavingProduct.objects.filter(savingoption__save_trm=month).order_by('savingoption__intr_rate')
-#         serializer = SavingMonthSerializer(savings, many=True, save_trm=month)
-#         return Response(serializer.data)
 
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])

@@ -79,6 +79,6 @@ export const useRecommendStore = defineStore(
         });
     };
     return { getRecommendFirst, recommendFirst, getRecommendSecond, recommendSecond };
-  }
-  // { persist: true },
+  },
+  { persist: true },
 );

@@ -56,10 +56,10 @@ export const useDepositStore = defineStore(
     };
 
     // Deposit Data 데이터 GET
-    const getDepositData = function (productName) {
+    const getDepositData = function (productCode) {
       axios({
         method: "get",
-        url: `${API_URL}/deposit/${productName}/`,
+        url: `${API_URL}/deposit/${productCode}/`,
         headers: {
           Authorization: `Token ${userStore.token}`,
         },
@@ -74,10 +74,10 @@ export const useDepositStore = defineStore(
     };
     // Deposit Option 데이터 GET
     const getDepositDetailOption = ref([]);
-    const getDepositOptionData = function (productName) {
+    const getDepositOptionData = function (productCode) {
       axios({
         method: "get",
-        url: `${API_URL}/deposit/${productName}/option/`,
+        url: `${API_URL}/deposit/${productCode}/option/`,
         headers: {
           Authorization: `Token ${userStore.token}`,
         },
@@ -91,7 +91,7 @@ export const useDepositStore = defineStore(
         });
     };
     // 꿀바르기 확인
-    const getHoney = function (productCode, productName) {
+    const getHoney = function (productCode) {
       axios({
         method: "post",
         url: `${API_URL}/like/deposit/${productCode}/`,
@@ -100,7 +100,7 @@ export const useDepositStore = defineStore(
         },
       }).then((res) => {
         console.log(res);
-        getDepositData(productName);
+        getDepositData(productCode);
       });
     };
     const profileDepositData = ref([]);
@@ -139,6 +139,6 @@ export const useDepositStore = defineStore(
       }
     };
     return { depositProductsData, loadDepositData, allDeposit, getAllDeposit, bankList, getDepositData, getDepositDetail, getDepositOptionData, getDepositDetailOption, getHoney, getProfileDeposit, profileDepositData, toggleData };
-  },
+  }
   // { persist: true }
 );

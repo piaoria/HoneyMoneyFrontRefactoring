@@ -145,133 +145,134 @@
                       <v-card-text class="ibm-plex-sans-kr-regular">만기 후 이자율 : {{ honeyDeposit.mtrt_int }}</v-card-text>
                       <v-container align="center">
                         <v-btn color="yellow-darken-3" variant="tonal" @click="viewDetailDeposit(honeyDeposit)">Details</v-btn>
-                        <v-dialog v-model="viewDetailDepositDialog" width="1000">
-                          <v-card class="mx-auto" width="1000">
-                            <template v-slot:subtitle>
-                              <v-row>
-                                <v-col cols="4"></v-col>
-                                <v-col align="center" cols="4">
-                                  <div class="my-2 custom-subtitle ibm-plex-sans-kr-regular">{{ selectedDeposit?.kor_co_nm }} ({{ selectedDeposit?.dcls_month }})</div>
-                                </v-col>
-                              </v-row>
-                            </template>
-                            <template v-slot:title>
-                              <v-row align="center" justify="space-between">
-                                <v-col align="center"></v-col>
-                                <v-col align="center" class="pb-0 my-2">
-                                  <span class="font-weight-black ibm-plex-sans-kr-regular">
-                                    <h2>{{ selectedDeposit?.fin_prdt_nm }}</h2>
-                                  </span>
-                                </v-col>
-                                <v-col align="center" class="pb-0 mt-2"></v-col>
-                              </v-row>
-                            </template>
-
-                            <hr />
-                            <v-row justify="center" align="center">
-                              <v-col cols="3" class="d-flex justify-center">
-                                <v-tooltip activator="parent" location="top">
-                                  <template v-slot:activator="{ on, attrs }">
-                                    <v-img class="mb-0" :src="jar" width="40px" height="40px" :style="{ display: 'inline-block', marginLeft: '8px' }" v-bind="attrs" v-on="on"></v-img>
-                                  </template>
-                                  꿀통에 담은 이용자 수
-                                </v-tooltip>
-                              </v-col>
-                              <v-col>
-                                <v-card-text class="">{{ honeyDeposit.interest_user?.length }} 명</v-card-text>
-                              </v-col>
-                            </v-row>
-                            <hr />
-                            <v-row justify="center" align="center">
-                              <v-col cols="3" class="d-flex justify-center">
-                                <v-card-text class="text-style" align="center">가입 방법</v-card-text>
-                              </v-col>
-                              <v-col>
-                                <v-card-text class="">{{ selectedDeposit?.join_way }}</v-card-text>
-                              </v-col>
-                            </v-row>
-                            <hr />
-                            <v-row justify="center" align="center">
-                              <v-col cols="3" class="d-flex justify-center">
-                                <v-card-text class="text-style" align="center">만기 후 이자율</v-card-text>
-                              </v-col>
-                              <v-col>
-                                <v-card-text class="me-12">{{ selectedDeposit?.mtrt_int }}</v-card-text>
-                              </v-col>
-                            </v-row>
-                            <hr />
-                            <v-row justify="center" align="center">
-                              <v-col cols="3" class="d-flex justify-center">
-                                <v-card-text class="text-style" align="center">우대 조건</v-card-text>
-                              </v-col>
-                              <v-col>
-                                <v-card-text class="me-12">{{ selectedDeposit?.spcl_cnd }}</v-card-text>
-                              </v-col>
-                            </v-row>
-                            <hr />
-                            <v-row justify="center" align="center">
-                              <v-col cols="3" class="d-flex justify-center">
-                                <v-card-text class="text-style" align="center">가입 대상</v-card-text>
-                              </v-col>
-                              <v-col>
-                                <v-card-text class="">{{ selectedDeposit?.join_member }}</v-card-text>
-                              </v-col>
-                            </v-row>
-                            <hr />
-                            <v-row justify="center" align="center">
-                              <v-col cols="3" class="d-flex justify-center">
-                                <v-card-text class="text-style" align="center">가입 제한</v-card-text>
-                              </v-col>
-                              <v-col>
-                                <v-card-text class="">
-                                  {{ selectedDeposit?.join_deny == 1 ? "제한없음" : selectedDeposit?.join_deny == 2 ? "서민전용" : selectedDeposit?.join_deny == 3 ? "일부제한" : "기타" }}
-                                </v-card-text>
-                              </v-col>
-                            </v-row>
-                            <hr />
-                            <v-row justify="center" align="center">
-                              <v-col cols="3" class="d-flex justify-center">
-                                <v-card-text class="text-style" align="center">최고 한도</v-card-text>
-                              </v-col>
-                              <v-col>
-                                <v-card-text class="">
-                                  {{
-                                    selectedDeposit?.max_limit === null
-                                      ? "한도 없음"
-                                      : `${new Intl.NumberFormat("ko-KR", {
-                                          style: "currency",
-                                          currency: "KRW",
-                                        }).format(selectedDeposit?.max_limit)}`
-                                  }}
-                                </v-card-text>
-                              </v-col>
-                            </v-row>
-                            <hr />
-                            <v-row justify="center" align="center">
-                              <v-col cols="3" class="d-flex justify-center">
-                                <v-card-text class="text-style" align="center">기타 유의사항</v-card-text>
-                              </v-col>
-                              <v-col>
-                                <v-card-text class="me-12">{{ selectedDeposit?.etc_note }}</v-card-text>
-                              </v-col>
-                            </v-row>
-                            <hr />
-                            <v-row justify="center" class="mt-2" align="center">
-                              <v-col>
-                                <DepositChartComponent :data="honeyDeposit.depositoption_set" :title="honeyDeposit.fin_prdt_nm" />
-                              </v-col>
-                            </v-row>
-                            <hr />
-                            <v-card-actions class="justify-center">
-                              <v-btn class="mb-6" @click="viewDetailDepositDialog = false">OK</v-btn>
-                            </v-card-actions>
-                          </v-card>
-                        </v-dialog>
                       </v-container>
                     </v-card>
                   </v-card>
                 </v-carousel-item>
               </v-carousel>
+              <!-- dialog -->
+              <v-dialog v-model="viewDetailDepositDialog" width="1000">
+                <v-card class="mx-auto" width="1000">
+                  <template v-slot:subtitle>
+                    <v-row>
+                      <v-col cols="4"></v-col>
+                      <v-col align="center" cols="4">
+                        <div class="my-2 custom-subtitle ibm-plex-sans-kr-regular">{{ depositStore.getDepositDetail?.kor_co_nm }} ({{ depositStore.getDepositDetail?.dcls_month }})</div>
+                      </v-col>
+                    </v-row>
+                  </template>
+                  <template v-slot:title>
+                    <v-row align="center" justify="space-between">
+                      <v-col align="center"></v-col>
+                      <v-col align="center" class="pb-0 my-2">
+                        <span class="font-weight-black ibm-plex-sans-kr-regular">
+                          <h2>{{ depositStore.getDepositDetail?.fin_prdt_nm }}</h2>
+                        </span>
+                      </v-col>
+                      <v-col align="center" class="pb-0 mt-2"></v-col>
+                    </v-row>
+                  </template>
+
+                  <hr />
+                  <v-row justify="center" align="center">
+                    <v-col cols="3" class="d-flex justify-center">
+                      <v-tooltip activator="parent" location="top">
+                        <template v-slot:activator="{ on, attrs }">
+                          <v-img class="mb-0" :src="jar" width="40px" height="40px" :style="{ display: 'inline-block', marginLeft: '8px' }" v-bind="attrs" v-on="on"></v-img>
+                        </template>
+                        꿀통에 담은 이용자 수
+                      </v-tooltip>
+                    </v-col>
+                    <v-col>
+                      <v-card-text class="">{{ depositStore.getDepositDetail?.interest_user.length }} 명</v-card-text>
+                    </v-col>
+                  </v-row>
+                  <hr />
+                  <v-row justify="center" align="center">
+                    <v-col cols="3" class="d-flex justify-center">
+                      <v-card-text class="text-style" align="center">가입 방법</v-card-text>
+                    </v-col>
+                    <v-col>
+                      <v-card-text class="">{{ depositStore.getDepositDetail?.join_way }}</v-card-text>
+                    </v-col>
+                  </v-row>
+                  <hr />
+                  <v-row justify="center" align="center">
+                    <v-col cols="3" class="d-flex justify-center">
+                      <v-card-text class="text-style" align="center">만기 후 이자율</v-card-text>
+                    </v-col>
+                    <v-col>
+                      <v-card-text class="me-12">{{ depositStore.getDepositDetail?.mtrt_int }}</v-card-text>
+                    </v-col>
+                  </v-row>
+                  <hr />
+                  <v-row justify="center" align="center">
+                    <v-col cols="3" class="d-flex justify-center">
+                      <v-card-text class="text-style" align="center">우대 조건</v-card-text>
+                    </v-col>
+                    <v-col>
+                      <v-card-text class="me-12">{{ depositStore.getDepositDetail?.spcl_cnd }}</v-card-text>
+                    </v-col>
+                  </v-row>
+                  <hr />
+                  <v-row justify="center" align="center">
+                    <v-col cols="3" class="d-flex justify-center">
+                      <v-card-text class="text-style" align="center">가입 대상</v-card-text>
+                    </v-col>
+                    <v-col>
+                      <v-card-text class="">{{ depositStore.getDepositDetail?.join_member }}</v-card-text>
+                    </v-col>
+                  </v-row>
+                  <hr />
+                  <v-row justify="center" align="center">
+                    <v-col cols="3" class="d-flex justify-center">
+                      <v-card-text class="text-style" align="center">가입 제한</v-card-text>
+                    </v-col>
+                    <v-col>
+                      <v-card-text class="">
+                        {{ depositStore.getDepositDetail?.join_deny == 1 ? "제한없음" : depositStore.getDepositDetail?.join_deny == 2 ? "서민전용" : depositStore.getDepositDetail?.join_deny == 3 ? "일부제한" : "기타" }}
+                      </v-card-text>
+                    </v-col>
+                  </v-row>
+                  <hr />
+                  <v-row justify="center" align="center">
+                    <v-col cols="3" class="d-flex justify-center">
+                      <v-card-text class="text-style" align="center">최고 한도</v-card-text>
+                    </v-col>
+                    <v-col>
+                      <v-card-text class="">
+                        {{
+                          depositStore.getDepositDetail?.max_limit === null
+                            ? "한도 없음"
+                            : `${new Intl.NumberFormat("ko-KR", {
+                                style: "currency",
+                                currency: "KRW",
+                              }).format(depositStore.getDepositDetail?.max_limit)}`
+                        }}
+                      </v-card-text>
+                    </v-col>
+                  </v-row>
+                  <hr />
+                  <v-row justify="center" align="center">
+                    <v-col cols="3" class="d-flex justify-center">
+                      <v-card-text class="text-style" align="center">기타 유의사항</v-card-text>
+                    </v-col>
+                    <v-col>
+                      <v-card-text class="me-12">{{ depositStore.getDepositDetail?.etc_note }}</v-card-text>
+                    </v-col>
+                  </v-row>
+                  <hr />
+                  <v-row justify="center" class="mt-2" align="center">
+                    <v-col>
+                      <DepositChartComponent v-if="depositStore.getDepositDetailOption" :data="depositStore.getDepositDetailOption" :title="depositStore.getDepositDetail.fin_prdt_nm" />
+                    </v-col>
+                  </v-row>
+                  <hr />
+                  <v-card-actions class="justify-center">
+                    <v-btn class="mb-6" @click="viewDetailDepositDialog = false">OK</v-btn>
+                  </v-card-actions>
+                </v-card>
+              </v-dialog>
             </v-container>
             <v-container v-else>
               <v-container class="my-6 py-6 ibm-plex-sans-kr-regular" align="center" justify="center">
@@ -324,132 +325,133 @@
                         <v-card-text class="ibm-plex-sans-kr-regular">만기 후 이자율 : {{ honeySaving.mtrt_int }}</v-card-text>
                         <v-container align="center">
                           <v-btn color="yellow-darken-3" variant="tonal" @click="viewDetailSaving(honeySaving)">Details</v-btn>
-                          <v-dialog v-model="viewDetailSavingDialog" width="1000">
-                            <v-card class="mx-auto" width="1000">
-                              <template v-slot:subtitle>
-                                <v-row>
-                                  <v-col cols="4"></v-col>
-                                  <v-col align="center" cols="4">
-                                    <div class="my-2 custom-subtitle ibm-plex-sans-kr-regular">{{ selectedSaving?.kor_co_nm }} ({{ selectedSaving?.dcls_month }})</div>
-                                  </v-col>
-                                </v-row>
-                              </template>
-                              <template v-slot:title>
-                                <v-row align="center" justify="space-between">
-                                  <v-col align="center"></v-col>
-                                  <v-col align="center" class="pb-0 my-2">
-                                    <span class="font-weight-black ibm-plex-sans-kr-regular">
-                                      <h2>{{ selectedSaving?.fin_prdt_nm }}</h2>
-                                    </span>
-                                  </v-col>
-                                  <v-col align="center" class="pb-0 mt-2"></v-col>
-                                </v-row>
-                              </template>
-                              <hr />
-                              <v-row justify="center" align="center">
-                                <v-col cols="3" class="d-flex justify-center">
-                                  <v-tooltip activator="parent" location="top">
-                                    <template v-slot:activator="{ on, attrs }">
-                                      <v-img class="mb-0" :src="jar" width="40px" height="40px" :style="{ display: 'inline-block', marginLeft: '8px' }" v-bind="attrs" v-on="on"></v-img>
-                                    </template>
-                                    꿀통에 담은 이용자 수
-                                  </v-tooltip>
-                                </v-col>
-                                <v-col>
-                                  <v-card-text class="">{{ honeySaving.interest_user?.length }} 명</v-card-text>
-                                </v-col>
-                              </v-row>
-                              <hr />
-                              <v-row justify="center" align="center">
-                                <v-col cols="3" class="d-flex justify-center">
-                                  <v-card-text class="text-style" align="center">가입 방법</v-card-text>
-                                </v-col>
-                                <v-col>
-                                  <v-card-text class="">{{ selectedSaving?.join_way }}</v-card-text>
-                                </v-col>
-                              </v-row>
-                              <hr />
-                              <v-row justify="center" align="center">
-                                <v-col cols="3" class="d-flex justify-center">
-                                  <v-card-text class="text-style" align="center">만기 후 이자율</v-card-text>
-                                </v-col>
-                                <v-col>
-                                  <v-card-text class="me-12">{{ selectedSaving?.mtrt_int }}</v-card-text>
-                                </v-col>
-                              </v-row>
-                              <hr />
-                              <v-row justify="center" align="center">
-                                <v-col cols="3" class="d-flex justify-center">
-                                  <v-card-text class="text-style" align="center">우대 조건</v-card-text>
-                                </v-col>
-                                <v-col>
-                                  <v-card-text class="me-12">{{ selectedSaving?.spcl_cnd }}</v-card-text>
-                                </v-col>
-                              </v-row>
-                              <hr />
-                              <v-row justify="center" align="center">
-                                <v-col cols="3" class="d-flex justify-center">
-                                  <v-card-text class="text-style" align="center">가입 대상</v-card-text>
-                                </v-col>
-                                <v-col>
-                                  <v-card-text class="">{{ selectedSaving?.join_member }}</v-card-text>
-                                </v-col>
-                              </v-row>
-                              <hr />
-                              <v-row justify="center" align="center">
-                                <v-col cols="3" class="d-flex justify-center">
-                                  <v-card-text class="text-style" align="center">가입 제한</v-card-text>
-                                </v-col>
-                                <v-col>
-                                  <v-card-text class="">
-                                    {{ selectedSaving?.join_deny == 1 ? "제한없음" : selectedSaving?.join_deny == 2 ? "서민전용" : selectedSaving?.join_deny == 3 ? "일부제한" : "기타" }}
-                                  </v-card-text>
-                                </v-col>
-                              </v-row>
-                              <hr />
-                              <v-row justify="center" align="center">
-                                <v-col cols="3" class="d-flex justify-center">
-                                  <v-card-text class="text-style" align="center">최고 한도</v-card-text>
-                                </v-col>
-                                <v-col>
-                                  <v-card-text class="">
-                                    {{
-                                      selectedSaving?.max_limit === null
-                                        ? "한도 없음"
-                                        : `${new Intl.NumberFormat("ko-KR", {
-                                            style: "currency",
-                                            currency: "KRW",
-                                          }).format(selectedSaving?.max_limit)}`
-                                    }}
-                                  </v-card-text>
-                                </v-col>
-                              </v-row>
-                              <hr />
-                              <v-row justify="center" align="center">
-                                <v-col cols="3" class="d-flex justify-center">
-                                  <v-card-text class="text-style" align="center">기타 유의사항</v-card-text>
-                                </v-col>
-                                <v-col>
-                                  <v-card-text class="me-12">{{ selectedSaving?.etc_note }}</v-card-text>
-                                </v-col>
-                              </v-row>
-                              <hr />
-                              <v-row justify="center" align="center">
-                                <v-col>
-                                  <SavingChartComponent :data="honeySaving.savingoption_set" :title="honeySaving.fin_prdt_nm" />
-                                </v-col>
-                              </v-row>
-                              <hr />
-                              <v-card-actions class="justify-center">
-                                <v-btn class="mb-6" @click="viewDetailSavingDialog = false">OK</v-btn>
-                              </v-card-actions>
-                            </v-card>
-                          </v-dialog>
                         </v-container>
                       </v-card>
                     </v-card>
                   </v-carousel-item>
                 </v-carousel>
+                <!-- dialog -->
+                <v-dialog v-model="viewDetailSavingDialog" width="1000">
+                  <v-card class="mx-auto" width="1000">
+                    <template v-slot:subtitle>
+                      <v-row>
+                        <v-col cols="4"></v-col>
+                        <v-col align="center" cols="4">
+                          <div class="my-2 custom-subtitle ibm-plex-sans-kr-regular">{{ savingStore.getSavingDetail?.kor_co_nm }} ({{ savingStore.getSavingDetail?.dcls_month }})</div>
+                        </v-col>
+                      </v-row>
+                    </template>
+                    <template v-slot:title>
+                      <v-row align="center" justify="space-between">
+                        <v-col align="center"></v-col>
+                        <v-col align="center" class="pb-0 my-2">
+                          <span class="font-weight-black ibm-plex-sans-kr-regular">
+                            <h2>{{ savingStore.getSavingDetail?.fin_prdt_nm }}</h2>
+                          </span>
+                        </v-col>
+                        <v-col align="center" class="pb-0 mt-2"></v-col>
+                      </v-row>
+                    </template>
+                    <hr />
+                    <v-row justify="center" align="center">
+                      <v-col cols="3" class="d-flex justify-center">
+                        <v-tooltip activator="parent" location="top">
+                          <template v-slot:activator="{ on, attrs }">
+                            <v-img class="mb-0" :src="jar" width="40px" height="40px" :style="{ display: 'inline-block', marginLeft: '8px' }" v-bind="attrs" v-on="on"></v-img>
+                          </template>
+                          꿀통에 담은 이용자 수
+                        </v-tooltip>
+                      </v-col>
+                      <v-col>
+                        <v-card-text class="">{{ savingStore.getSavingDetail?.interest_user.length }} 명</v-card-text>
+                      </v-col>
+                    </v-row>
+                    <hr />
+                    <v-row justify="center" align="center">
+                      <v-col cols="3" class="d-flex justify-center">
+                        <v-card-text class="text-style" align="center">가입 방법</v-card-text>
+                      </v-col>
+                      <v-col>
+                        <v-card-text class="">{{ savingStore.getSavingDetail?.join_way }}</v-card-text>
+                      </v-col>
+                    </v-row>
+                    <hr />
+                    <v-row justify="center" align="center">
+                      <v-col cols="3" class="d-flex justify-center">
+                        <v-card-text class="text-style" align="center">만기 후 이자율</v-card-text>
+                      </v-col>
+                      <v-col>
+                        <v-card-text class="me-12">{{ savingStore.getSavingDetail?.mtrt_int }}</v-card-text>
+                      </v-col>
+                    </v-row>
+                    <hr />
+                    <v-row justify="center" align="center">
+                      <v-col cols="3" class="d-flex justify-center">
+                        <v-card-text class="text-style" align="center">우대 조건</v-card-text>
+                      </v-col>
+                      <v-col>
+                        <v-card-text class="me-12">{{ savingStore.getSavingDetail?.spcl_cnd }}</v-card-text>
+                      </v-col>
+                    </v-row>
+                    <hr />
+                    <v-row justify="center" align="center">
+                      <v-col cols="3" class="d-flex justify-center">
+                        <v-card-text class="text-style" align="center">가입 대상</v-card-text>
+                      </v-col>
+                      <v-col>
+                        <v-card-text class="">{{ savingStore.getSavingDetail?.join_member }}</v-card-text>
+                      </v-col>
+                    </v-row>
+                    <hr />
+                    <v-row justify="center" align="center">
+                      <v-col cols="3" class="d-flex justify-center">
+                        <v-card-text class="text-style" align="center">가입 제한</v-card-text>
+                      </v-col>
+                      <v-col>
+                        <v-card-text class="">
+                          {{ savingStore.getSavingDetail?.join_deny == 1 ? "제한없음" : savingStore.getSavingDetail?.join_deny == 2 ? "서민전용" : savingStore.getSavingDetail?.join_deny == 3 ? "일부제한" : "기타" }}
+                        </v-card-text>
+                      </v-col>
+                    </v-row>
+                    <hr />
+                    <v-row justify="center" align="center">
+                      <v-col cols="3" class="d-flex justify-center">
+                        <v-card-text class="text-style" align="center">최고 한도</v-card-text>
+                      </v-col>
+                      <v-col>
+                        <v-card-text class="">
+                          {{
+                            savingStore.getSavingDetail?.max_limit === null
+                              ? "한도 없음"
+                              : `${new Intl.NumberFormat("ko-KR", {
+                                  style: "currency",
+                                  currency: "KRW",
+                                }).format(savingStore.getSavingDetail?.max_limit)}`
+                          }}
+                        </v-card-text>
+                      </v-col>
+                    </v-row>
+                    <hr />
+                    <v-row justify="center" align="center">
+                      <v-col cols="3" class="d-flex justify-center">
+                        <v-card-text class="text-style" align="center">기타 유의사항</v-card-text>
+                      </v-col>
+                      <v-col>
+                        <v-card-text class="me-12">{{ savingStore.getSavingDetail?.etc_note }}</v-card-text>
+                      </v-col>
+                    </v-row>
+                    <hr />
+                    <v-row justify="center" align="center">
+                      <v-col>
+                        <SavingChartComponent v-if="savingStore.getSavingDetailOption" :data="savingStore.getSavingDetailOption" :title="savingStore.getSavingDetail.fin_prdt_nm" />
+                      </v-col>
+                    </v-row>
+                    <hr />
+                    <v-card-actions class="justify-center">
+                      <v-btn class="mb-6" @click="viewDetailSavingDialog = false">OK</v-btn>
+                    </v-card-actions>
+                  </v-card>
+                </v-dialog>
               </v-container>
               <v-container v-else>
                 <v-container class="my-6 py-6 ibm-plex-sans-kr-regular" align="center" justify="center">
@@ -538,9 +540,6 @@ const isLoading = ref(true);
 const value = ref(0);
 const interval = ref(-1);
 
-const selectedDeposit = ref(null); // 선택된 예금 데이터
-const selectedSaving = ref(null); // 선택된 적금 데이터
-
 onMounted(() => {
   userStore.getProfile();
   checkDeposit();
@@ -625,12 +624,14 @@ const viewDetailDepositDialog = ref(false);
 const viewDetailSavingDialog = ref(false);
 
 const viewDetailDeposit = function (depositData) {
-  selectedDeposit.value = depositData;
+  depositStore.getDepositData(depositData.fin_prdt_cd);
+  depositStore.getDepositOptionData(depositData.fin_prdt_cd);
   viewDetailDepositDialog.value = true;
 };
 
 const viewDetailSaving = function (savingData) {
-  selectedSaving.value = savingData;
+  savingStore.getSavingData(savingData.fin_prdt_cd);
+  savingStore.getSavingOptionData(savingData.fin_prdt_cd);
   viewDetailSavingDialog.value = true;
 };
 
@@ -679,7 +680,7 @@ const removeDepositCard = function (removeDepositData) {
     depositLoding.value = false;
   }, 1000);
   // 카드 삭제 로직
-  depositStore.getHoney(removeDepositData.fin_prdt_cd, removeDepositData.fin_prdt_nm);
+  depositStore.getHoney(removeDepositData.fin_prdt_cd);
   depositStore.toggleData(removeDepositData);
   checkDeposit();
 };
@@ -689,7 +690,7 @@ const removeSavingCard = function (removeSavingData) {
     savingLoding.value = false;
   }, 1000);
   // 카드 삭제 로직
-  savingStore.getHoney(removeSavingData.fin_prdt_cd, removeSavingData.fin_prdt_nm);
+  savingStore.getHoney(removeSavingData.fin_prdt_cd);
   savingStore.toggleData(removeSavingData);
   checkSaving();
 };
@@ -725,9 +726,6 @@ const removeSavingCard = function (removeSavingData) {
   background-color: #f5f5f5;
 }
 
-.custom-link:hover {
-  color: darkblue;
-}
 hr {
   margin-top: 10px;
   margin-bottom: 10px;

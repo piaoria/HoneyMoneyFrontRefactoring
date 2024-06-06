@@ -56,10 +56,10 @@ export const useSavingStore = defineStore(
         });
     };
     // Saving Data 데이터 GET
-    const getSavingData = function (productName) {
+    const getSavingData = function (productCode) {
       axios({
         method: "get",
-        url: `${API_URL}/saving/${productName}/`,
+        url: `${API_URL}/saving/${productCode}/`,
         headers: {
           Authorization: `Token ${userStore.token}`,
         },
@@ -72,10 +72,10 @@ export const useSavingStore = defineStore(
           console.log(err);
         });
     };
-    const getSavingOptionData = function (productName) {
+    const getSavingOptionData = function (productCode) {
       axios({
         method: "get",
-        url: `${API_URL}/saving/${productName}/option/`,
+        url: `${API_URL}/saving/${productCode}/option/`,
         headers: {
           Authorization: `Token ${userStore.token}`,
         },
@@ -89,7 +89,7 @@ export const useSavingStore = defineStore(
     };
 
     // 꿀바르기 확인
-    const getHoney = function (productCode, productName) {
+    const getHoney = function (productCode) {
       axios({
         method: "post",
         url: `${API_URL}/like/saving/${productCode}/`,
@@ -98,7 +98,7 @@ export const useSavingStore = defineStore(
         },
       }).then((res) => {
         console.log(res);
-        getSavingData(productName);
+        getSavingData(productCode);
       });
     };
     const profileSavingData = ref([]);

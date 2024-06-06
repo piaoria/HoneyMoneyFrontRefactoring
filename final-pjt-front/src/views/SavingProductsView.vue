@@ -31,11 +31,11 @@
         <v-chip :color="getColor(value)">{{ value }}</v-chip>
       </template>
       <template v-slot:item.상품명="{ item }">
-        <v-btn class="mx-auto custom-btn" @click="showDetails(item.상품명)">{{ item.상품명 }}</v-btn>
+        <v-btn class="mx-auto custom-btn" @click="showDetails(item.상품코드)">{{ item.상품명 }}</v-btn>
       </template>
     </v-data-table-virtual>
 
-    <v-dialog v-model="dialog">
+    <v-dialog v-model="dialog" width="1000">
       <SavingDetailComponent @close-dialog="dialog = false" />
     </v-dialog>
   </v-container>
@@ -82,6 +82,7 @@ const loaddata_free = function () {
 
         return {
           NO: i++,
+          상품코드: element.fin_prdt_cd,
           은행: element.kor_co_nm,
           상품명: element.fin_prdt_nm,
           "6개월": intrRate6,
@@ -117,6 +118,7 @@ const loaddata_period = function () {
 
         return {
           NO: i++,
+          상품코드: element.fin_prdt_cd,
           은행: element.kor_co_nm,
           상품명: element.fin_prdt_nm,
           "6개월": intrRate6,
@@ -177,15 +179,15 @@ watch(type, () => {
   }
 });
 
-const showDetails = (productName) => {
-  findDetail(productName);
+const showDetails = (productCode) => {
+  findDetail(productCode);
   // 로딩 데이터 확인 후 출력될 다이얼로그 데이터에 삽입
   dialog.value = true;
 };
 
-const findDetail = function (productName) {
-  savingStore.getSavingData(productName);
-  savingStore.getSavingOptionData(productName);
+const findDetail = function (productCode) {
+  savingStore.getSavingData(productCode);
+  savingStore.getSavingOptionData(productCode);
 };
 
 // getColor 함수 정의

@@ -11,13 +11,13 @@
         <v-col class="py-0 my-0">
           <v-card-actions v-if="savingStore.getSavingDetail.interest_user && !savingStore.getSavingDetail.interest_user.includes(userStore.userInfo.id)" class="mt-3">
             <div>
-              <v-img @click="saveEvent(savingStore.getSavingDetail.fin_prdt_cd, savingStore.getSavingDetail.fin_prdt_nm, savingStore.getSavingDetail)" :src="empty" class="button-image hover-effect" style="width: 50px" />
+              <v-img @click="saveEvent(savingStore.getSavingDetail.fin_prdt_cd, savingStore.getSavingDetail)" :src="empty" class="button-image hover-effect" style="width: 50px" />
               <div class="pe-2" align="center">{{ savingStore.getSavingDetail.interest_user?.length }}</div>
             </div>
           </v-card-actions>
           <v-card-actions v-else class="mt-3">
             <div>
-              <v-img @click="deleteEvent(savingStore.getSavingDetail.fin_prdt_cd, savingStore.getSavingDetail.fin_prdt_nm, savingStore.getSavingDetail)" :src="jar" class="button-image hover-effect" style="width: 50px" />
+              <v-img @click="deleteEvent(savingStore.getSavingDetail.fin_prdt_cd, savingStore.getSavingDetail)" :src="jar" class="button-image hover-effect" style="width: 50px" />
               <div class="pe-2" align="center">{{ savingStore.getSavingDetail.interest_user?.length }}</div>
             </div>
           </v-card-actions>
@@ -127,26 +127,26 @@ const emit = defineEmits(["close-dialog"]);
 const savingStore = useSavingStore();
 const userStore = useUserStore();
 
-const saveEvent = function (productCode, productName, productInfo) {
+const saveEvent = function (productCode, productInfo) {
   console.log(`꿀바르기!`);
   // 적금 쪽 확인
   swal("꿀통에 저장했습니다!", "PROFILE에서 꿀통을 확인하세요!", "success", {
     button: false,
     timer: 1500,
   });
-  savingStore.getHoney(productCode, productName);
+  savingStore.getHoney(productCode);
   // 추가 토글
   savingStore.toggleData(productInfo);
 };
 
-const deleteEvent = function (productCode, productName) {
+const deleteEvent = function (productCode, productInfo) {
   console.log(`꿀버리기...`);
   // 적금 쪽 확인
   swal("꿀통에서 제거했습니다", "꿀통이 가벼워졌어요", "info", {
     button: false,
     timer: 1500,
   });
-  savingStore.getHoney(productCode, productName);
+  savingStore.getHoney(productCode);
   // 제거 토글
   savingStore.toggleData(productInfo);
 };

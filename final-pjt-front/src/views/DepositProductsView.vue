@@ -23,7 +23,7 @@
         <v-chip :color="getColor(value)">{{ value }}</v-chip>
       </template>
       <template v-slot:item.상품명="{ item }">
-        <v-btn class="mx-auto custom-btn" @click="showDetails(item.상품명)">{{ item.상품명 }}</v-btn>
+        <v-btn class="mx-auto custom-btn" @click="showDetails(item.상품코드)">{{ item.상품명 }}</v-btn>
       </template>
     </v-data-table-virtual>
     <v-dialog v-model="dialog" width="1000">
@@ -89,14 +89,15 @@ watch(bank, () => {
   }
 });
 
-const showDetails = (productName) => {
-  findDetail(productName);
+const showDetails = (productCode) => {
+  findDetail(productCode);
   dialog.value = true;
 };
 
-const findDetail = function (productName) {
-  depositStore.getDepositData(productName);
-  depositStore.getDepositOptionData(productName);
+const findDetail = function (productCode) {
+  console.log(productCode);
+  depositStore.getDepositData(productCode);
+  depositStore.getDepositOptionData(productCode);
 };
 
 // getColor 함수 정의
