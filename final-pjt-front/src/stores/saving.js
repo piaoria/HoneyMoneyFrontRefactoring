@@ -28,9 +28,12 @@ export const useSavingStore = defineStore(
         });
     };
 
+    // 모든 Saving 데이터 받을 리스트
     const allSaving = ref([]);
-    const bankList = ref([]);
+    // 모든 Saving 데이터 속 존재하는 은행 List 출력 위함 (v-select items)
+    const bankList = ref(["모든은행"]);
 
+    // Saving List
     const getAllSaving = function () {
       axios({
         method: "get",
@@ -124,16 +127,16 @@ export const useSavingStore = defineStore(
         });
     };
     const toggleData = function (productInfo) {
-      const index = userStore.userProfile.interest_saving.findIndex((item) => item['id'] === productInfo['id'])
+      const index = userStore.userProfile.interest_saving.findIndex((item) => item["id"] === productInfo["id"]);
       if (index !== -1) {
         // 객체가 배열에 존재하면 제거
-        userStore.userProfile.interest_saving.splice(index, 1)
+        userStore.userProfile.interest_saving.splice(index, 1);
       } else {
         // 객체가 배열에 존재하지 않으면 추가
-        userStore.userProfile.interest_saving.push(productInfo)
+        userStore.userProfile.interest_saving.push(productInfo);
       }
-    }
+    };
     return { savingProductsData, loadSavingData, allSaving, getAllSaving, bankList, getSavingData, getSavingDetail, getSavingOptionData, getSavingDetailOption, getHoney, getProfileSaving, profileSavingData, toggleData };
-  },
+  }
   // { persist: true }
 );

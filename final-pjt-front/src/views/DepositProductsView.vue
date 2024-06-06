@@ -27,7 +27,7 @@
       </template>
     </v-data-table-virtual>
     <v-dialog v-model="dialog" width="1000">
-      <DepositDetailComponent />
+      <DepositDetailComponent @close-dialog="dialog = false" />
     </v-dialog>
   </v-container>
 </template>
@@ -91,7 +91,6 @@ watch(bank, () => {
 
 const showDetails = (productName) => {
   findDetail(productName);
-  // 로딩 데이터 확인 후 출력될 다이얼로그 데이터에 삽입
   dialog.value = true;
 };
 

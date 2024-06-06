@@ -72,6 +72,7 @@ export const useDepositStore = defineStore(
           console.log(err);
         });
     };
+    // Deposit Option 데이터 GET
     const getDepositDetailOption = ref([]);
     const getDepositOptionData = function (productName) {
       axios({

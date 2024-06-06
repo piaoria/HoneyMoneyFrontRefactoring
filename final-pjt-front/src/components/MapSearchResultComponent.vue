@@ -10,99 +10,11 @@
             <h4>{{ result.kor_co_nm }}</h4>
           </v-card-subtitle>
         </v-card>
-        <v-dialog v-model="result.dialog" width="1000">
-          <v-card class="mx-auto" width="1000">
-            <template v-slot:title>
-              <v-row class="mb-0">
-                <v-img :src="bankIcon" class="mt-10 ms-3" style="height: 40px; width: 30px"></v-img>
-                <v-col class="pb-0 mt-6" cols="10">
-                  <span class="font-weight-black text-h5">{{ result.fin_prdt_nm }}</span>
-                  <v-card-subtitle>{{ result.kor_co_nm }}</v-card-subtitle>
-                </v-col>
-                <v-col></v-col>
-              </v-row>
-            </template>
-            <hr />
-
-            <v-row justify="center" align="center">
-              <v-col cols="3" class="d-flex justify-center">
-                <v-card-text class="text-style" align="center">가입 방법</v-card-text>
-              </v-col>
-              <v-col>
-                <v-card-text class="">{{ result.join_way }}</v-card-text>
-              </v-col>
-            </v-row>
-            <hr />
-
-            <v-row justify="center" align="center">
-              <v-col cols="3" class="d-flex justify-center">
-                <v-card-text class="text-style" align="center">만기 후 이자율</v-card-text>
-              </v-col>
-              <v-col>
-                <v-card-text class="me-12">{{ result.mtrt_int }}</v-card-text>
-              </v-col>
-            </v-row>
-            <hr />
-            <v-row justify="center" align="center">
-              <v-col cols="3" class="d-flex justify-center">
-                <v-card-text class="text-style" align="center">우대 조건</v-card-text>
-              </v-col>
-              <v-col>
-                <v-card-text class="me-12">{{ result.spcl_cnd }}</v-card-text>
-              </v-col>
-            </v-row>
-            <hr />
-            <v-row justify="center" align="center">
-              <v-col cols="3" class="d-flex justify-center">
-                <v-card-text class="text-style" align="center">가입 대상</v-card-text>
-              </v-col>
-              <v-col>
-                <v-card-text class="">{{ result.join_member }}</v-card-text>
-              </v-col>
-            </v-row>
-            <hr />
-            <v-row justify="center" align="center">
-              <v-col cols="3" class="d-flex justify-center">
-                <v-card-text class="text-style" align="center">가입 제한</v-card-text>
-              </v-col>
-              <v-col>
-                <v-card-text class="">
-                  {{ result.join_deny == 1 ? "제한없음" : result.join_deny == 2 ? "서민전용" : result.join_deny == 3 ? "일부제한" : "기타" }}
-                </v-card-text>
-              </v-col>
-            </v-row>
-            <hr />
-            <v-row justify="center" align="center">
-              <v-col cols="3" class="d-flex justify-center">
-                <v-card-text class="text-style" align="center">최고 한도</v-card-text>
-              </v-col>
-              <v-col>
-                <v-card-text class="">
-                  {{
-                    result.max_limit === null
-                      ? "한도 없음"
-                      : `${new Intl.NumberFormat("ko-KR", {
-                          style: "currency",
-                          currency: "KRW",
-                        }).format(result.max_limit)}`
-                  }}
-                </v-card-text>
-              </v-col>
-            </v-row>
-            <hr />
-            <v-row justify="center" align="center">
-              <v-col cols="3" class="d-flex justify-center">
-                <v-card-text class="text-style" align="center">기타 유의사항</v-card-text>
-              </v-col>
-              <v-col>
-                <v-card-text class="me-12">{{ result.etc_note }}</v-card-text>
-              </v-col>
-            </v-row>
-            <hr>
-            <v-card-actions class="justify-center">
-              <v-btn class="mb-6" @click="result.dialog = false">OK</v-btn>
-            </v-card-actions>
-          </v-card>
+        <v-dialog v-model="depositDialog">
+          <DepositDetailComponent @close-dialog="depositDialog = false" />
+        </v-dialog>
+        <v-dialog v-model="savingDialog">
+          <SavingDetailComponent @close-dialog="savingDialog = false" />
         </v-dialog>
       </v-col>
     </v-row>
@@ -115,11 +27,17 @@ import axios from "axios";
 import { useUserStore } from "@/stores/user";
 import swal from "sweetalert";
 import { useRouter } from "vue-router";
-import bankIcon from "@/assets/bank-icon.png";
+import { useDepositStore } from "@/stores/deposit";
+import { useSavingStore } from "@/stores/saving";
+import DepositDetailComponent from "./DepositDetailComponent.vue";
+import SavingDetailComponent from "./SavingDetailComponent.vue";
+const depositDialog = ref(false);
+const savingDialog = ref(false);
 
+const depositStore = useDepositStore();
+const savingStore = useSavingStore();
 const router = useRouter();
 const userStore = useUserStore();
-console.log(userStore.userInfo);
 const results = ref([]);
 
 const props = defineProps({
@@ -167,14 +85,12 @@ const searchDeposit = function (keyword) {
       res.data.forEach((element) => {
         results.value.push({
           ...element,
-          dialog: false,
-          resultOption: element.resultOption || [],
+          type: "예금",
         });
       });
     })
     .catch((err) => {
       console.log("예금은 없어용");
-      console.log(err);
     });
 };
 
@@ -191,63 +107,30 @@ const searchSaving = function (keyword) {
       res.data.forEach((element) => {
         results.value.push({
           ...element,
-          dialog: false,
-          resultOption: element.resultOption || [],
+          type: "적금",
         });
       });
     })
     .catch((err) => {
       console.log("적금은 없어용");
-      console.log(err);
     });
 };
 
 const openDialog = (result) => {
-  result.dialog = true;
+  console.log(result.fin_prdt_nm);
+  if (result.type === "예금") {
+    depositStore.getDepositData(result.fin_prdt_nm);
+    depositStore.getDepositOptionData(result.fin_prdt_nm);
+    depositDialog.value = true;
+  } else if (result.type === "적금") {
+    savingStore.getSavingData(result.fin_prdt_nm);
+    savingStore.getSavingOptionData(result.fin_prdt_nm);
+    savingDialog.value = true;
+  }
 };
-
 </script>
 
 <style scoped>
-.hoverable-row {
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.hoverable-row:hover {
-  background-color: #f5f5f5;
-}
-
-.custom-link {
-  color: black;
-  font-weight: bold;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.custom-link:hover {
-  color: darkblue;
-}
-hr {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 40px;
-  margin-right: 40px;
-  box-shadow: 1px 1px 1px rgba(193, 193, 193, 0.435);
-  border: 1px solid rgba(255, 255, 255, 0);
-}
-.text-style {
-  font-weight: bolder;
-  font-size: medium;
-}
-.button-image {
-  transition: transform 0.3s ease-in-out;
-}
-
-.hover-effect:hover {
-  transform: translateY(-10px);
-}
-
 .custom-bg {
   background-color: #f8f0de;
 }

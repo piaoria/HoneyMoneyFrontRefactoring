@@ -125,7 +125,7 @@ const chartOptionsF = ref({
   plugins: {
     title: {
       display: true,
-      text: `<정액정립식 저축 금리`,
+      text: `정액정립식 저축 금리`,
       font: {
         size: 18, // 제목의 글꼴 크기 설정
       },

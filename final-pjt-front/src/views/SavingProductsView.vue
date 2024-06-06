@@ -9,7 +9,7 @@
           </v-tabs>
         </v-col>
         <v-col class="d-flex justify-end">
-          <v-select class="ps-16 ms-16 ibm-plex-sans-kr-regular" v-model="bank" :items="bankList" label="은행" variant="outlined"></v-select>
+          <v-select class="ps-16 ms-16 ibm-plex-sans-kr-regular" v-model="bank" :items="savingStore.bankList" label="은행" variant="outlined"></v-select>
         </v-col>
       </v-row>
     </v-container>
@@ -35,133 +35,18 @@
       </template>
     </v-data-table-virtual>
 
-    <v-dialog v-model="dialog" width="1000">
-      <v-card class="mx-auto" width="1000">
-        <template v-slot:title>
-          <v-row class="mb-0">
-            <v-img :src="bankIcon" class="mt-10 ms-3" style="height: 40px; width: 30px"></v-img>
-            <v-col class="pb-0 mt-6" cols="10">
-              <span class="font-weight-black text-h5">{{ savingStore.getSavingDetail.fin_prdt_nm }}</span>
-              <v-card-subtitle>{{ savingStore.getSavingDetail.kor_co_nm }} ({{ savingStore.getSavingDetail.dcls_month }})</v-card-subtitle>
-            </v-col>
-            <!-- 꿀바르기 버튼 시작-->
-            <v-col class="py-0 my-0">
-              <v-card-actions v-if="savingStore.getSavingDetail.interest_user && !savingStore.getSavingDetail.interest_user.includes(userStore.userInfo.id)" class="mt-3">
-                <div>
-                  <v-img @click="saveEvent(savingStore.getSavingDetail.fin_prdt_cd, savingStore.getSavingDetail.fin_prdt_nm, savingStore.getSavingDetail)" :src="empty" class="button-image hover-effect" style="width: 50px" />
-                  <div class="pe-2" align="center">{{ savingStore.getSavingDetail.interest_user?.length }}</div>
-                </div>
-              </v-card-actions>
-              <v-card-actions v-else class="mt-3">
-                <div>
-                  <v-img @click="deleteEvent(savingStore.getSavingDetail.fin_prdt_cd, savingStore.getSavingDetail.fin_prdt_nm, savingStore.getSavingDetail)" :src="jar" class="button-image hover-effect" style="width: 50px" />
-                  <div class="pe-2" align="center">{{ savingStore.getSavingDetail.interest_user?.length }}</div>
-                </div>
-              </v-card-actions>
-            </v-col>
-            <!-- 꿀 바르기 버튼 끝 -->
-          </v-row>
-        </template>
-        <hr />
-        <v-row justify="center" align="center">
-          <v-col cols="3" class="d-flex justify-center">
-            <v-card-text class="text-style" align="center">가입 방법</v-card-text>
-          </v-col>
-          <v-col>
-            <v-card-text class="">{{ savingStore.getSavingDetail.join_way }}</v-card-text>
-          </v-col>
-        </v-row>
-        <hr />
-
-        <v-row justify="center" align="center">
-          <v-col cols="3" class="d-flex justify-center">
-            <v-card-text class="text-style" align="center">만기 후 이자율</v-card-text>
-          </v-col>
-          <v-col>
-            <v-card-text class="me-12">{{ savingStore.getSavingDetail.mtrt_int }}</v-card-text>
-          </v-col>
-        </v-row>
-        <hr />
-        <v-row justify="center" align="center">
-          <v-col cols="3" class="d-flex justify-center">
-            <v-card-text class="text-style" align="center">우대 조건</v-card-text>
-          </v-col>
-          <v-col>
-            <v-card-text class="me-12">{{ savingStore.getSavingDetail.spcl_cnd }}</v-card-text>
-          </v-col>
-        </v-row>
-        <hr />
-        <v-row justify="center" align="center">
-          <v-col cols="3" class="d-flex justify-center">
-            <v-card-text class="text-style" align="center">가입 대상</v-card-text>
-          </v-col>
-          <v-col>
-            <v-card-text class="">{{ savingStore.getSavingDetail.join_member }}</v-card-text>
-          </v-col>
-        </v-row>
-        <hr />
-        <v-row justify="center" align="center">
-          <v-col cols="3" class="d-flex justify-center">
-            <v-card-text class="text-style" align="center">가입 제한</v-card-text>
-          </v-col>
-          <v-col>
-            <v-card-text class="">
-              {{ savingStore.getSavingDetail.join_deny == 1 ? "제한없음" : savingStore.getSavingDetail.join_deny == 2 ? "서민전용" : savingStore.getSavingDetail.join_deny == 3 ? "일부제한" : "기타" }}
-            </v-card-text>
-          </v-col>
-        </v-row>
-        <hr />
-        <v-row justify="center" align="center">
-          <v-col cols="3" class="d-flex justify-center">
-            <v-card-text class="text-style" align="center">최고 한도</v-card-text>
-          </v-col>
-          <v-col>
-            <v-card-text class="">
-              {{
-                savingStore.getSavingDetail.max_limit === null
-                  ? "한도 없음"
-                  : `${new Intl.NumberFormat("ko-KR", {
-                      style: "currency",
-                      currency: "KRW",
-                    }).format(savingStore.getSavingDetail.max_limit)}`
-              }}
-            </v-card-text>
-          </v-col>
-        </v-row>
-        <hr />
-        <v-row justify="center" align="center">
-          <v-col cols="3" class="d-flex justify-center">
-            <v-card-text class="text-style" align="center">기타 유의사항</v-card-text>
-          </v-col>
-          <v-col>
-            <v-card-text class="me-12">{{ savingStore.getSavingDetail.etc_note }}</v-card-text>
-          </v-col>
-        </v-row>
-        <hr />
-        <v-row justify="center" align="center">
-          <v-col>
-            <ChartComponent v-if="savingStore.getSavingDetailOption" :data="savingStore.getSavingDetailOption" :title="savingStore.getSavingDetail.fin_prdt_nm" :chartType="charttype" />
-          </v-col>
-        </v-row>
-        <hr />
-        <v-card-actions class="justify-center">
-          <v-btn class="mb-6" @click="dialog = false">OK</v-btn>
-        </v-card-actions>
-      </v-card>
+    <v-dialog v-model="dialog">
+      <SavingDetailComponent @close-dialog="dialog = false" />
     </v-dialog>
   </v-container>
 </template>
 
 <script setup>
-import { onMounted, watch, ref, watchEffect, computed } from "vue";
+import { onMounted, watch, ref } from "vue";
 import { useSavingStore } from "@/stores/saving";
 import { useUserStore } from "@/stores/user";
-import bankIcon from "@/assets/bank-icon.png";
-import swal from "sweetalert";
-import jar from "@/assets/jar.png";
-import empty from "@/assets/empty.png";
-import ChartComponent from "@/components/SavingChartComponent.vue";
-const charttype = ref("F");
+import SavingDetailComponent from "@/components/SavingDetailComponent.vue";
+
 const userStore = useUserStore();
 const dialog = ref(false);
 const activeButton = ref("free");
@@ -169,12 +54,12 @@ const activeButton = ref("free");
 const savingStore = useSavingStore();
 const savingData = ref([]);
 onMounted(() => {
-  bank.value = "모든은행";
   savingStore.getAllSaving();
-  charttype.value = "F";
 });
 
 const type = ref("");
+
+// 자유 적립식
 const loaddata_free = function () {
   let i = 1;
   activeButton.value = "free";
@@ -197,7 +82,6 @@ const loaddata_free = function () {
 
         return {
           NO: i++,
-          공시제출일: element.dcls_month,
           은행: element.kor_co_nm,
           상품명: element.fin_prdt_nm,
           "6개월": intrRate6,
@@ -209,6 +93,8 @@ const loaddata_free = function () {
       .filter((data) => data !== null); // null이 아닌 값만 필터링
   }
 };
+
+// 정기적립식
 const loaddata_period = function () {
   let i = 1;
   activeButton.value = "period";
@@ -231,7 +117,6 @@ const loaddata_period = function () {
 
         return {
           NO: i++,
-          공시제출일: element.dcls_month,
           은행: element.kor_co_nm,
           상품명: element.fin_prdt_nm,
           "6개월": intrRate6,
@@ -244,34 +129,24 @@ const loaddata_period = function () {
   }
 };
 
-const bankList = ref(["모든은행"]);
-const bank = ref("");
+const bank = ref("은행을 선택해 보세요!");
+
 watch(
   () => savingStore.allSaving,
   () => {
     if (type.value == 0) {
       bank.value = "모든은행";
       // 자유 적금
-      charttype.value = "F";
       loaddata_free();
     } else if (type.value == 1) {
       bank.value = "모든은행";
       // 정기 적금
-      charttype.value = "T";
       loaddata_period();
-      console.log(bankList.value);
     }
   },
   { immediate: true }
 );
 
-watchEffect(() => {
-  if (savingStore.bankList && savingStore.bankList.length > 0) {
-    savingStore.bankList.forEach((item) => {
-      bankList.value.push(item);
-    });
-  }
-});
 watch(bank, () => {
   if (type.value == 0) {
     // 자유 적금
@@ -290,11 +165,9 @@ watch(bank, () => {
 watch(type, () => {
   if (type.value == 0) {
     // 자유 적금
-    // bank.value = "모든은행";
     loaddata_free();
   } else if (type.value == 1) {
     // 정기 적금
-    // bank.value = "모든은행";
     loaddata_period();
   }
   if (bank.value !== "모든은행") {
@@ -313,30 +186,6 @@ const showDetails = (productName) => {
 const findDetail = function (productName) {
   savingStore.getSavingData(productName);
   savingStore.getSavingOptionData(productName);
-};
-
-const saveEvent = function (productCode, productName, productInfo) {
-  console.log(`꿀바르기!`);
-  // 적금 쪽 확인
-  swal("꿀통에 저장했습니다!", "PROFILE에서 꿀통을 확인하세요!", "success", {
-    button: false,
-    timer: 1500,
-  });
-  savingStore.getHoney(productCode, productName);
-  // 추가 토글
-  savingStore.toggleData(productInfo);
-};
-
-const deleteEvent = function (productCode, productName) {
-  console.log(`꿀버리기...`);
-  // 적금 쪽 확인
-  swal("꿀통에서 제거했습니다", "꿀통이 가벼워졌어요", "info", {
-    button: false,
-    timer: 1500,
-  });
-  savingStore.getHoney(productCode, productName);
-  // 제거 토글
-  savingStore.toggleData(productInfo);
 };
 
 // getColor 함수 정의
@@ -360,51 +209,5 @@ const userPeriod = userStore.userProfile.desirePeriod;
 
 .hoverable-row:hover {
   background-color: #f5f5f5;
-}
-
-.custom-link {
-  color: black;
-  font-weight: bold;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.custom-link:hover {
-  color: darkblue;
-}
-hr {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 40px;
-  margin-right: 40px;
-  box-shadow: 1px 1px 1px rgba(193, 193, 193, 0.435);
-  border: 1px solid rgba(255, 255, 255, 0);
-}
-.text-style {
-  font-weight: bolder;
-  font-size: medium;
-}
-.btn-style {
-  font-size: large;
-  background-color: rgba(255, 174, 0, 0.661);
-  border-radius: 5%px;
-}
-.custom-btn {
-  background-color: #f5f5f5;
-  box-shadow: none;
-}
-
-.custom-btn:hover {
-  background-color: #f0f0f0; /* 마우스를 올렸을 때 연한 회색 배경색으로 변경 */
-}
-
-.button-image {
-  transition: transform 0.3s, filter 0.3s;
-  cursor: pointer;
-}
-
-.hover-effect:hover {
-  transform: scale(1.2);
-  filter: brightness(1.1);
 }
 </style>
