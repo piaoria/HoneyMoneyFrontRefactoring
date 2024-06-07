@@ -127,7 +127,6 @@ import { ref, computed } from "vue";
 import useVuelidate from "@vuelidate/core";
 import { required, minLength, maxLength, minValue, maxValue, sameAs } from "@vuelidate/validators";
 import { useUserStore } from "@/stores/user";
-import logo from "@/assets/logo_dev.png";
 
 const selected = ref([]);
 const userStore = useUserStore();

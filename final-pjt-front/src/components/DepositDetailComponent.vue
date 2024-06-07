@@ -127,7 +127,6 @@ import swal from "sweetalert";
 import jar from "@/assets/jar.png";
 import empty from "@/assets/empty.png";
 import ChartComponent from "@/components/DepositChartComponent.vue";
-import { defineEmits } from "vue";
 
 const emit = defineEmits(["close-dialog"]);
 const depositStore = useDepositStore();

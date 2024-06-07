@@ -147,7 +147,6 @@ import recommendPhoto from "@/assets/recommend.png";
 import savingPhoto from "@/assets/saving.png";
 import exchangePhoto from "@/assets/exchange.png";
 import swal from "sweetalert";
-import ChatbotComponent from "@/components/ChatbotComponent.vue";
 const userStore = useUserStore();
 const isLoggedIn = computed(() => userStore.isLogin);
 
