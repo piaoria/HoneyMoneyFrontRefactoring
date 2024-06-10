@@ -12,7 +12,7 @@
         </v-col>
       </v-row>
     </v-row>
-    <v-carousel height="300" show-arrows="hover" hide-delimiters>
+    <v-carousel v-model="currentSlide" height="300" show-arrows="hover" hide-delimiters>
       <v-carousel-item v-for="(honeyDeposit, index) in depositStore.profileDepositData" :key="`carousel1-${index}`" class="no-padding">
         <v-card class="mx-16 fill-height d-flex align-center justify-center" elevation="0">
           <v-card class="card-design mb-2 density-compact" :prepend-avatar="getBankIcon(honeyDeposit.kor_co_nm)" variant="text">
@@ -59,7 +59,7 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, watch } from "vue";
 import { storeToRefs } from "pinia";
 import { useUserStore } from "@/stores/user";
 import { useDepositStore } from "@/stores/deposit";
@@ -118,6 +118,13 @@ const userStore = useUserStore();
 
 const { userProfile } = storeToRefs(userStore);
 
+const currentSlide = ref(0);
+
+watch(depositStore.profileDepositData, (newValue, oldValue) => {
+  if (currentSlide.value >= newValue.length) {
+    currentSlide.value = newValue.length > 0 ? newValue.length - 1 : 0;
+  }
+});
 // 꿀바른 상품 확인 함수
 const checkDeposit = function () {
   depositStore.getProfileDeposit(userProfile.value.interest_deposit);
@@ -144,6 +151,10 @@ const removeDepositCard = function (removeDepositData) {
   depositStore.getHoney(removeDepositData.fin_prdt_cd);
   depositStore.toggleData(removeDepositData);
   checkDeposit();
+  // 강제로 carousel 리렌더링하면서 v-model 값을 변경시켜 cardpage를 변경
+  if (currentSlide.value > 0) {
+    currentSlide.value -= 1;
+  }
 };
 </script>
 

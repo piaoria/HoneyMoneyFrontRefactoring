@@ -7,7 +7,7 @@
     <v-card class="my-5 mx-auto" max-width="100%">
       <v-row justify="end">
         <v-col cols="auto">
-          <v-btn @click="createArticle" type="submit" class="mt-5 me-10" color="yellow-darken-3" size="large" variant="tonal">New POST</v-btn>
+          <v-btn @click="createArticle" class="mt-5 me-10" color="yellow-darken-3" size="large" variant="tonal">New POST</v-btn>
         </v-col>
       </v-row>
       <v-list>
