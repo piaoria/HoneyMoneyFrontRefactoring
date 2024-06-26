@@ -89,5 +89,5 @@ export const useCommentStore = defineStore(
     };
     return { comments, getCommentList, createComment, deleteComment, updateComment };
   },
-  { persist: true }
+  // { persist: true }
 );

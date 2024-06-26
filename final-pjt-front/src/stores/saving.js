@@ -137,6 +137,6 @@ export const useSavingStore = defineStore(
       }
     };
     return { savingProductsData, loadSavingData, allSaving, getAllSaving, bankList, getSavingData, getSavingDetail, getSavingOptionData, getSavingDetailOption, getHoney, getProfileSaving, profileSavingData, toggleData };
-  }
-  // { persist: true }
+  },
+  { persist: true }
 );

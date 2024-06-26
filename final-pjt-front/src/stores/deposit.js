@@ -139,6 +139,6 @@ export const useDepositStore = defineStore(
       }
     };
     return { depositProductsData, loadDepositData, allDeposit, getAllDeposit, bankList, getDepositData, getDepositDetail, getDepositOptionData, getDepositDetailOption, getHoney, getProfileDeposit, profileDepositData, toggleData };
-  }
-  // { persist: true }
+  },
+  { persist: true }
 );

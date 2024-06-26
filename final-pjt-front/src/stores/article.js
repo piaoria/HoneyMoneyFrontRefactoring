@@ -108,26 +108,7 @@ export const useArticleStore = defineStore(
           console.log(err);
         });
     };
-    // 게시글 수정 PUT
-    const putArticle = function (databox, articleId) {
-      const { title, content } = databox;
-      axios({
-        method: "delete",
-        url: `${API_URL}/articles/${articleId}/`,
-        data: {
-          title,
-          content,
-        },
-        headers: {
-          Authorization: `Token ${userStore.token}`,
-        },
-      }).then((res) => {
-        console.log(res);
-        window.alert("수정이 완료되었습니다.");
-        router.push({ name: "ArticleDetailView", params: { id: articleId } });
-      });
-    };
     return { articlesList, articleDetail, getArticleList, getArticleDetail, createArticle, updateArticle, deleteArticle, putArticle };
   },
-  { persist: true }
+  // { persist: true }
 );
